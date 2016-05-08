@@ -2,6 +2,7 @@
 
 const Hapi = require('hapi');
 const Good = require('good');
+const Qr = require('qr-image');
 
 const server = new Hapi.Server();
 server.connection({ port: 3000 });
@@ -11,6 +12,18 @@ server.route({
     path: '/',
     handler: function (request, reply) {
         reply('Hello, world!');
+    }
+});
+
+server.route({
+    method: 'GET',
+    path: '/qr_code',
+    handler: function (request, reply) {
+      let str = request.query.text ? request.query.text : 'ZOO App!';
+      let response = reply(Qr.imageSync(str, {type: 'png'}));
+      response.variety = 'buffer';
+      response.type('image/png');
+      return response;
     }
 });
 
