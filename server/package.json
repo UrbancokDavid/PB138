@@ -1,0 +1,25 @@
+{
+  "name": "zoo-app-server",
+  "version": "1.0.0",
+  "description": "Simple backend server for ZOO mobile aplication",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UrbancokDavid/ZOO-App.git"
+  },
+  "author": "Dávid Urbančok, Ondrej Mulár",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UrbancokDavid/ZOO-App/issues"
+  },
+  "homepage": "https://github.com/UrbancokDavid/ZOO-App#readme",
+  "dependencies": {
+    "good": "^7.0.0",
+    "good-console": "^6.1.1",
+    "good-squeeze": "^3.0.1",
+    "hapi": "^13.4.0"
+  }
+}
