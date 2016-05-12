@@ -3,7 +3,7 @@
 What is is?
 -----------
 
-ZOO app is lightweight hybrid mobile application for the visitors of the Brno Zoological garden. Developed at the Faculty of Informatics for the FI:PB138 Modern Markup Languages and Their Applications class.
+ZOO app is a lightweight hybrid mobile application for the visitors of the Brno Zoological garden. Developed at the Faculty of Informatics for the FI:PB138 Modern Markup Languages and Their Applications class.
 
 Latest version
 --------------
