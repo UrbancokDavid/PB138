@@ -1,0 +1,25 @@
+[
+  {
+    "id": "0",
+    "title": {
+      "en": "name",
+      "cz": "nazov"
+    },
+    "description": {
+      "en": "descritpion of event",
+      "cz": "popis udalosti"
+    },
+    "url": "url",
+    "title_image": "url",
+    "images": [],
+    "timestamp": 1419038000,
+    "start_date": 1419038000,
+    "end_data": 1419038000,
+    "all_day": true,
+    "recurrence": {
+      "count": "10",
+      "unit": "day|year|hour|week|month",
+    },
+    "categories": []
+  }
+]

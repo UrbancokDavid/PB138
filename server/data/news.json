@@ -1,0 +1,19 @@
+[
+  {
+    "id": "0",
+    "title": {
+        "en": "Just one random news that we have",
+        "cz": "Jen nepodstana novinka kteru mame"
+    },
+    "title_image": "/images/news/new_title_image.png",
+    "timestamp": 1419038000,
+    "description": {
+      "en": "Lorem ipsum",
+      "cz": "testing"
+    },
+    "url": "/news/0",
+    "images": [
+      "urls"
+    ]
+  }
+]

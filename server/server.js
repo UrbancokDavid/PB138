@@ -3,6 +3,7 @@
 const Hapi = require('hapi');
 const Good = require('good');
 const Qr = require('qr-image');
+const Inert = require('inert');
 
 const server = new Hapi.Server();
 server.connection({ port: 3000 });
@@ -29,9 +30,41 @@ server.route({
 
 server.route({
     method: 'GET',
+    path: '/news',
+    handler: function (request, reply) {
+        reply.file('./data/news.json').type('application/json');
+    }
+});
+
+server.route({
+    method: 'GET',
+    path: '/animals',
+    handler: function (request, reply) {
+        reply.file('./data/animals.json').type('application/json');
+    }
+});
+
+server.route({
+    method: 'GET',
+    path: '/events',
+    handler: function (request, reply) {
+        let response = reply('501 NOT IMPLEMENTED');
+        response.statusCode = 501;
+        return response;
+    }
+});
+
+server.route({
+    method: 'GET',
     path: '/{name}',
     handler: function (request, reply) {
         reply('Hello, ' + encodeURIComponent(request.params.name) + '!');
+    }
+});
+
+server.register(Inert, (err) => {
+    if (err) {
+        throw err;
     }
 });
 
@@ -60,12 +93,12 @@ server.register({
     if (err) {
         throw err; // something bad happened loading the plugin
     }
+});
 
-    server.start((err) => {
+server.start((err) => {
 
-        if (err) {
-           throw err;
-        }
-        server.log('info', 'Server running at: ' + server.info.uri);
-    });
+    if (err) {
+       throw err;
+    }
+    server.log('info', 'Server running at: ' + server.info.uri);
 });

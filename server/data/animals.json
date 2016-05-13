@@ -1,0 +1,31 @@
+[
+  {
+    "id": "0",
+    "spieces": {
+      "en": "spieces of animal",
+      "cz": "druh zvierata",
+      "latin": "..."
+    },
+    "names": ["name", "meno"],
+    "location_data": "BLOB",
+    "title_image": "image/url",
+    "description": {
+      "en": "description of animal",
+      "cz": "popis zvierata",
+    },
+    "images": [],
+    "stories": {
+      "kids": {
+        "en": "story about animal for kids",
+        "cz": "pribeh o zvieratku pre deti"
+      },
+      "adults": {
+        "en": "story for adults",
+        "cz": "pribeh pre dospelych"
+      }
+    },
+    "sounds": [
+      "urls"
+    ]
+  }
+]
