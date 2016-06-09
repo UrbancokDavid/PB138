@@ -4,7 +4,7 @@
   "description": "Simple backend server for ZOO mobile aplication",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/mocha --reporter spec"
   },
   "repository": {
     "type": "git",
@@ -17,11 +17,13 @@
   },
   "homepage": "https://github.com/UrbancokDavid/ZOO-App#readme",
   "dependencies": {
+    "chai": "^3.5.0",
     "good": "^7.0.0",
     "good-console": "^6.1.1",
     "good-squeeze": "^3.0.1",
     "hapi": "^13.4.0",
     "inert": "^4.0.0",
+    "mocha": "^2.5.3",
     "qr-image": "^3.1.0"
   }
 }

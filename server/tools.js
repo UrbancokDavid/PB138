@@ -8,8 +8,8 @@ const time_unit_to_ms = {
 };
 
 function get_events_in_dates(event_list, from, to) {
-  let final_event_list = [];
-  for (let event in event_list) {
+  var final_event_list = [];
+  for (var event in event_list) {
     final_event_list = final_event_list.concat(
       get_event_in_dates(event, from, to)
     );
@@ -18,19 +18,30 @@ function get_events_in_dates(event_list, from, to) {
 }
 
 function get_event_in_dates(event, from, to) {
-  if (event.start_date > to || event.end_date < from || from < to) {
+  if (event.start_date > to || event.end_date < from || from > to) {
     return [];
   }
-  let event_list = [];
-  let get_next_fn;
-  let offset = time_unit_to_ms[event.recurrence.unit];
+  if (event.all_day) {
+    event.start_date.setHours(0, 0, 0, 0);
+    event.end_date.setHours(23, 59, 59, 999);
+  }
+  var event_list = [];
+  if (!('recurrence' in event)) {
+    if (is_event_in_range(event.start_date, event.end_date, from, to)) {
+      event_list.push(event);
+    }
+    return event_list;
+  }
 
-  let event_length = event.end_date - event.start_date;
+  var get_next_fn;
+  var offset = time_unit_to_ms[event.recurrence.unit];
+
+  var event_length = event.end_date - event.start_date;
   switch (event.recurrence.unit) {
     case 'hour':
     case 'day':
     case 'week':
-      get_next_fn = (timestamp, count=1) => {
+      get_next_fn = (timestamp, count) => {
         get_next_generic(offset, timestamp, count)
       };
       break;
@@ -54,7 +65,7 @@ function get_event_in_dates(event, from, to) {
     if (is_event_in_range(cur_start, cur_end, from, to)) {
       add_event(event_list, cur_start, cur_end);
     }
-    cur_start = get_next_fn(cur_start);
+    cur_start = get_next_fn(cur_start, 1);
   }
   return event_list;
 }
@@ -123,44 +134,53 @@ function get_event_in_dates(event, from, to) {
 //   }
 // }
 
-function get_next_generic(offset, timestamp, num=1) {
+function get_next_generic(offset, timestamp, num) {
   return timestamp + num*offset;
 }
 
-function get_next_month(timestamp, num=1) {
+function get_next_month(timestamp, num) {
   if (num <= 0) {
     return timestamp;
   }
-  let date = new Date(timestamp);
-  let months = date.getMonth() + num;
+  var date = new Date(timestamp);
+  var months = date.getMonth() + num;
   date.setFullYear(date.getFullYear() + months/12);
   date.setMonth((months)%12);
   return date.getTime();
 }
 
-function get_next_year(timestamp, num=1) {
+function get_next_year(timestamp, num) {
   if (num <= 0) {
     return timestamp;
   }
-  let date = new Date(timestamp);
+  var date = new Date(timestamp);
   date.setFullYear(date.getFullYear() + num);
   return date.getTime();
 }
 
 function is_event_in_range(event_start, event_end, from, to) {
+  if (event_start > event_end || from > to) {
+    throw RangeException();
+  }
   return (
-    (event_start <= from && event_end >= to) || // --S--+++++++++++++++--F--
-    (/*event_start <= from && */event_end >= from && event_end <= to ) || // -S--++++F+++++----
-    (event_start >= from && event_end <= to/* && event_end >= to*/) // ---++++S+++++---F--
+    (event_start <= from && event_end >= to) || // --S-+++++++-E--
+    (event_end >= from && event_end <= to) || //   --S-++++++E+---
+    (event_start >= from && event_start <= to) //  ---+S++++++-E--
   );
 }
 
 function add_event(event_list, old_event, from, to) {
-  let new_event = extend({}, old_event);
-  let same_id = event_list.filter((e) => e.id.split(':', 1)[0] == new_event.id);
+  var new_event = extend({}, old_event);
+  var same_id = event_list.filter((e) => e.id.split(':', 1)[0] == new_event.id);
   new_event.id += ':' + same_id.length;
   new_event.start_date = from;
   new_event.end_date = to;
-  delete new_event.recurrence;
-  event_list.append(new_event);
+  // delete new_event.recurrence;
+  event_list.push(new_event);
 }
+
+module.exports = {
+  is_event_in_range: is_event_in_range,
+  get_event_in_dates: get_event_in_dates,
+  get_events_in_dates: get_events_in_dates
+};
