@@ -32,9 +32,47 @@ server.route({
 
 server.route({
   method: 'GET',
+  path: '/news/{id}',
+  handler: function (request, reply) {
+    let data = JSON.parse(fs.readFileSync('./data/news.json', 'utf8'));
+    let response = null;
+    data.forEach(obj => {
+      if (obj.id == request.params.id) {
+        response = reply(obj);
+      }
+    });
+    if (!response) {
+      response = reply('{error:"404 Not Found"}');
+      response.statusCode = 404;
+    }
+    return response;
+  }
+});
+
+server.route({
+  method: 'GET',
   path: '/news',
   handler: function (request, reply) {
     reply.file('./data/news.json').type('application/json');
+  }
+});
+
+server.route({
+  method: 'GET',
+  path: '/animals/{id}',
+  handler: function (request, reply) {
+    let data = JSON.parse(fs.readFileSync('./data/animals.json', 'utf8'));
+    let response = null;
+    data.forEach(obj => {
+      if (obj.id == request.params.id) {
+        response = reply(obj);
+      }
+    });
+    if (!response) {
+      response = reply('{error:"404 Not Found"}');
+      response.statusCode = 404;
+    }
+    return response;
   }
 });
 
