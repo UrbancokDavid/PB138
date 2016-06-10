@@ -6,16 +6,14 @@
 </ion-navbar>
 
 <ion-content class="news">
-  <!--<ion-refresher (ionRefresh)="doRefresh($event)">-->
-    <!--<ion-refresher-content-->
-        <!--pullingIcon="arrow-dropdown"-->
-        <!--pullingText="Pull to refresh"-->
-        <!--refreshingSpinner="circles"-->
-        <!--refreshingText="Refreshing...">-->
-    <!--</ion-refresher-content>-->
-  <!--</ion-refresher>-->
-  <button (click)="doRefresh()">Refresh</button>
-  <button (click)="doRefresh(true)">Force Refresh</button>
+  <ion-refresher (refresh)="doRefresh($event, true)">
+    <ion-refresher-content
+        pullingIcon="arrow-dropdown"
+        pullingText="Pull to refresh"
+        refreshingSpinner="circles"
+        refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
   <ion-card *ngFor="let item of news">
     <img src="{{settings.host}}{{ item.title_image }}"/>
     <ion-card-content>

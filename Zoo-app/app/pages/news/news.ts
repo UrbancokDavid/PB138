@@ -1,4 +1,4 @@
-import {NavController, Page, Toast} from 'ionic-angular';
+import {NavController, Page, Toast, Refresher} from 'ionic-angular';
 import {GeneralProvider} from '../../providers/general-provider';
 import {Settings} from '../../common/settings'
 
@@ -14,7 +14,7 @@ export class News {
     this.doRefresh();
   }
 
-  doRefresh(force: boolean = false) {
+  doRefresh(refresher: Refresher = null, force: boolean = false) {
     console.log("refreshing...");
     this.newsData.getAllNews(force).then(news => {
       this.news = news;
@@ -27,6 +27,10 @@ export class News {
         duration: 3000
       });
       this.nav.present(toast);
+    }).then(() => {
+      if (refresher) {
+        refresher.complete();
+      }
     });
   }
 }

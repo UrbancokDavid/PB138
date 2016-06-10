@@ -1,4 +1,4 @@
-import {NavController, Page, Toast} from 'ionic-angular';
+import {NavController, Page, Toast, Refresher} from 'ionic-angular';
 import {GeneralProvider} from '../../providers/general-provider';
 import {Settings} from '../../common/settings'
 
@@ -17,7 +17,7 @@ export class Events {
     this.doRefresh();
   }
 
-  doRefresh(force: boolean = false) {
+  doRefresh(refresher: Refresher = null, force: boolean = false) {
     console.log("refreshing...");
     this.generalProvider.getAllEvents(force).then(events => {
       this.events = events;
@@ -30,6 +30,10 @@ export class Events {
         duration: 3000
       });
       this.nav.present(toast);
+    }).then(() => {
+      if (refresher) {
+        refresher.complete();
+      }
     });
   }
 }

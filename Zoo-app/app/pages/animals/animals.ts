@@ -1,4 +1,4 @@
-import {NavController, Page, Toast} from 'ionic-angular';
+import {NavController, Page, Toast, Refresher} from 'ionic-angular';
 import {GeneralProvider} from '../../providers/general-provider';
 import {Settings} from '../../common/settings';
 import {Tools} from '../../common/tools';
@@ -46,7 +46,7 @@ export class Animals {
     console.log("searchbar cancel");
   }
 
-  doRefresh(force: boolean = false) {
+  doRefresh(refresher: Refresher = null, force: boolean = false) {
     console.log("refreshing...");
     this.generalProvider.getAllAnimals(force).then(animals => {
       this.animals = animals;
@@ -61,6 +61,10 @@ export class Animals {
         duration: 3000
       });
       this.nav.present(toast);
+    }).then(() => {
+      if (refresher) {
+        refresher.complete();
+      }
     });
   }
 }
