@@ -10,7 +10,7 @@ export class DataProvider {
   constructor(private http: Http) {}
 
   get(request: string) {
-    var host: string = Settings.host + ':' + String(Settings.host_port) + '/';
+    var host: string = Settings.host;
     return new Promise((resolve, reject) => {
       this.http.get(host + request).subscribe(
         res => {
@@ -29,7 +29,7 @@ export class DataProvider {
     if (!force && this.cache[type]) {
       return Promise.resolve(this.cache[type]['list']);
     }
-    return this.get(type);
+    return this.get('/' + type);
   }
 
   getAll(type: string, force: boolean = false) {
@@ -50,7 +50,7 @@ export class DataProvider {
       return Promise.resolve(this.cache[type]['map'][id]);
     }
 
-    this.get(type + '/' + id).then(data => {
+    this.get('/' + type + '/' + id).then(data => {
       if (!this.cache[type]) {
         this.cache[type] = {};
         this.cache[type]['list'] = [];

@@ -1,6 +1,6 @@
 import {NavController, Page, Toast} from 'ionic-angular';
-import {NewsData} from '../../providers/news-data';
 import {GeneralProvider} from '../../providers/general-provider';
+import {Settings} from '../../common/settings'
 
 
 @Page({
@@ -8,6 +8,7 @@ import {GeneralProvider} from '../../providers/general-provider';
 })
 export class News {
   news = [];
+  settings = Settings;
 
   constructor(private nav: NavController, private newsData: GeneralProvider) {
     this.doRefresh();

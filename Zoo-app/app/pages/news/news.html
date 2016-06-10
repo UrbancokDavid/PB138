@@ -18,7 +18,7 @@
   <button (click)="flushNewsCache()">Flush Cache</button>
   <button (click)="doRefresh(true)">Force Refresh</button>
   <ion-card *ngFor="let item of news">
-    <img src="http://localhost:3000{{ item.title_image }}"/>
+    <img src="{{settings.host}}{{ item.title_image }}"/>
     <ion-card-content>
       <ion-card-title>
         {{ item.title.en }}
