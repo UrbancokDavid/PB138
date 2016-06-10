@@ -1,4 +1,5 @@
-import {App, Platform, IonicApp, MenuController, NavController} from 'ionic-angular';
+import {ViewChild} from '@angular/core';
+import {App, Platform, MenuController, Nav} from 'ionic-angular';
 import {StatusBar} from 'ionic-native';
 import {TabsPage} from './pages/tabs/tabs';
 import {About} from './pages/about/about';
@@ -12,35 +13,24 @@ import {DataProvider} from './common/data-provider';
   config: {}
 })
 export class MyApp {
+  @ViewChild(Nav) nav: Nav;
   rootPage: any = TabsPage;
-  private app;
-  private platform;
-  private menu;
-  private pages;
-  private nav;
+  pages = [
+    {title: 'About', component: About}
+  ];
 
-  constructor(app: IonicApp, platform: Platform, menu: MenuController) {
-    this.app = app;
-    this.platform = platform;
-    this.menu = menu;
-
+  constructor(private platform: Platform, private menu: MenuController) {
     this.initializeApp();
-
-    this.pages = [
-      { title: 'About', component: About}
-    ];
   };
 
   initializeApp() {
     this.platform.ready().then(() => {
       StatusBar.styleDefault();
-
-      this.nav= this.app.getComponent("nav");
     });
   }
 
   openPage(page) {
     this.menu.close()
-    this.nav.setRoot(page.component);
+    this.nav.push(page.component);
   }
 }
