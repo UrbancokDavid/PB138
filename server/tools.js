@@ -52,7 +52,6 @@ function get_event_instances_in_dates(event, from, to) {
       get_next_fn = get_next_month;
       break;
   }
-  // var multiplier = event.recurrence.count * offset;
   var cur_start = event.start_date;
   var cur_end;
   if (event.start_date < from) {
@@ -69,70 +68,6 @@ function get_event_instances_in_dates(event, from, to) {
   }
   return event_list;
 }
-
-// function get_event_instances_in_dates(event, from, to) {
-//   if (event.start_date > to || event.end_date < from || from < to) {
-//     return [];
-//   }
-//   let event_list = [];
-//   let multiplier = 0;
-//   let event_length = event.end_date - event.start_date;
-//   switch (event.recurrence.unit) {
-//     case 'hour':
-//     case 'day':
-//     case 'week':
-//       multiplier = event.recurrence.count * time_unit_to_ms[event.recurrence.unit];
-//       var cur_start = event.start_date;
-//       var cur_end = cur_start + event_length;
-//       if (event.start_date < from) {
-//         // find first event occurrence that starts before specified date range
-//         cur_start = event.start_date + ((from - event.start_date)/multiplier)*multiplier;
-//       }
-//
-//       while (cur_start <= event.to) {
-//         cur_end = cur_start + event_length;
-//         if (is_event_in_range(cur_start, cur_end, from, to)) {
-//           add_event(event_list, cur_start, cur_end);
-//         }
-//         // if (multiplier <= 0) {
-//         //   break;
-//         // }
-//         cur_start += multiplier;
-//       }
-//       break;
-//     case 'year':
-//       cur_start = event.start_date;
-//       cur_end = cur_start + event_length;
-//       multiplier = event.recurrence.count * 360*24*60*60*1000;
-//       if (event.start_date < from) {
-//         // find first event occurrence that starts before specified date range
-//         cur_start = get_next_year((from - event.start_date)/multiplier, event.recurrence.count);
-//       }
-//       while (cur_start <= event.to) {
-//         cur_end = cur_start + event_length;
-//         if (is_event_in_range(cur_start, cur_end, from, to)) {
-//           add_event(event_list, cur_start, cur_end);
-//         }
-//         cur_start = get_next_year(cur_start, event.recurrence.count);
-//       }
-//       break;
-//     case 'month':
-//       cur_start = event.start_date;
-//       cur_end = cur_start + event_length;
-//       multiplier = event.recurrence.count * 28*24*60*60*1000;
-//       if (event.start_date < from) {
-//         // find first event occurrence that starts before specified date range
-//         cur_start = get_next_month((from - event.start_date)/multiplier, event.recurrence.count);
-//       }
-//       while (cur_start <= event.to) {
-//         cur_end = cur_start + event_length;
-//         if (is_event_in_range(cur_start, cur_end, from, to)) {
-//           add_event(event_list, cur_start, cur_end);
-//         }
-//         cur_start = get_next_month(cur_start, event.recurrence.count);
-//       }
-//   }
-// }
 
 function get_next_generic(offset, timestamp, num) {
   return timestamp + num*offset;
@@ -175,7 +110,6 @@ function add_event(event_list, old_event, from, to) {
   new_event.id += ':' + same_id.length;
   new_event.start_date = from;
   new_event.end_date = to;
-  // delete new_event.recurrence;
   event_list.push(new_event);
 }
 
