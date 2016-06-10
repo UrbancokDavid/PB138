@@ -109,6 +109,14 @@ server.route({
   }
 });
 
+server.route({
+  method: 'GET',
+  path: '/images/{type}/{file}',
+  handler: function (request, reply) {
+    reply.file('./images/' + encodeURIComponent(request.params.type) + "/" + encodeURIComponent(request.params.file)).type('image/jpg');
+  }
+});
+
 server.register(Inert, (err) => {
   if (err) {
     throw err;
