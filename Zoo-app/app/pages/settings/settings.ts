@@ -6,6 +6,13 @@ import {Language} from '../../common/languages';
   templateUrl: 'build/pages/settings/settings.html',
 })
 export class SettingsPage {
-  constructor(public nav: NavController) {}
+  languages: Language[] = [
+    {value: 'en', title: 'English'},
+    {value: 'cz', title: 'Český'}
+  ];
+  selectedLanguage: string = 'en';
+
+  constructor(public nav: NavController) {
+  }
 }
 

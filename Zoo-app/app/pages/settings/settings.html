@@ -6,9 +6,8 @@
   <ion-list>
     <ion-item>
       <ion-label>Language</ion-label>
-      <ion-select [(ngModel)]="Language">
-        <ion-option value="en">English</ion-option>
-        <ion-option value="cz">Český</ion-option>
+      <ion-select [(ngModel)]="selectedLanguage">
+        <ion-option *ngFor="let l of languages " value="{{l.value}}">{{l.title}}</ion-option>
       </ion-select>
     </ion-item>
   </ion-list>
