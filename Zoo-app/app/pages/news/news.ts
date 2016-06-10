@@ -1,5 +1,6 @@
 import {NavController, Page, Toast} from 'ionic-angular';
-import {NewsData} from '../../providers/news-data'
+import {NewsData} from '../../providers/news-data';
+import {GeneralProvider} from '../../providers/general-provider';
 
 
 @Page({
@@ -8,11 +9,11 @@ import {NewsData} from '../../providers/news-data'
 export class News {
   news = [];
 
-  constructor(private nav: NavController, private newsData: NewsData) {
+  constructor(private nav: NavController, private newsData: GeneralProvider) {
     this.doRefresh();
   }
 
-  doRefresh(refresher: any = null, force: boolean = false) {
+  doRefresh(force: boolean = false) {
     console.log("refreshing...");
     this.newsData.getAllNews(force).then(news => {
       this.news = news;
@@ -20,15 +21,11 @@ export class News {
     }).catch(() => {
       console.log("failed");
       let toast = Toast.create({
-        message: 'Unable to get connect to server.',
+        message: 'Unable to connect to server.',
         showCloseButton: true,
         duration: 3000
       });
       this.nav.present(toast);
-    }).then(() => {
-      if (refresher) {
-        refresher.complete();
-      }
     });
   }
 

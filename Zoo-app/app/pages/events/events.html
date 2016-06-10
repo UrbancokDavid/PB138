@@ -6,5 +6,20 @@
 </ion-navbar>
 
 <ion-content class="events">
+  <button (click)="doRefresh()">Refresh</button>
+  <button (click)="flushNewsCache()">Flush Cache</button>
+  <button (click)="doRefresh(true)">Force Refresh</button>
+  <ion-card *ngFor="let item of events">
 
+    <ion-card-header>
+      <ion-item>
+        {{item.title.en}}
+      </ion-item>
+    </ion-card-header>
+
+    <ion-item>
+      {{item.description.en}}
+    </ion-item>
+
+  </ion-card>
 </ion-content>

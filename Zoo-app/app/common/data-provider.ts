@@ -5,6 +5,7 @@ import {Settings} from './settings';
 
 @Injectable()
 export class DataProvider {
+  cache = {};
 
   constructor(private http: Http) {}
 
@@ -22,5 +23,46 @@ export class DataProvider {
         }
       )
     });
+  }
+
+  load(type: string, force: boolean = false) {
+    if (!force && this.cache[type]) {
+      return Promise.resolve(this.cache[type]['list']);
+    }
+    return this.get(type);
+  }
+
+  getAll(type: string, force: boolean = false) {
+    return this.load(type, force).then((data: any) => {
+      this.cache[type] = {};
+      this.cache[type]['list'] = data;
+      var map = {};
+      data.forEach(item => {
+        map[item['id']] = item;
+      });
+      this.cache[type]['map'] = map;
+      return this.cache[type]['list'];
+    });
+  }
+
+  getById(type: string, id: string, force: boolean = false) {
+    if (!force && this.cache[type] && (id in this.cache[type]['map'])) {
+      return Promise.resolve(this.cache[type]['map'][id]);
+    }
+
+    this.get(type + '/' + id).then(data => {
+      if (!this.cache[type]) {
+        this.cache[type] = {};
+        this.cache[type]['list'] = [];
+        this.cache[type]['map'] = {};
+      }
+      this.cache[type]['list'].push(data);
+      this.cache[type]['map'][data['id']] = data;
+      return data;
+    });
+  }
+
+  flushCache() {
+    this.cache = {};
   }
 }

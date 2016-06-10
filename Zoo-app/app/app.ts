@@ -7,11 +7,12 @@ import {QrcodePage} from './pages/qrcode/qrcode';
 import {About} from './pages/about/about';
 import {NewsData} from './providers/news-data';
 import {DataProvider} from './common/data-provider';
+import {GeneralProvider} from './providers/general-provider';
 
 
 @App({
   templateUrl: 'build/app.html',
-  providers: [NewsData, DataProvider],
+  providers: [NewsData, DataProvider, GeneralProvider],
   config: {}
 })
 export class MyApp {
@@ -34,7 +35,7 @@ export class MyApp {
   }
 
   openPage(page) {
-    this.menu.close()
+    this.menu.close();
     this.nav.push(page.component);
   }
 }
