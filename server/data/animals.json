@@ -2,16 +2,136 @@
   {
     "id": "0",
     "spieces": {
-      "en": "spieces of animal",
-      "cz": "druh zvierata",
+      "en": "Baloo the bear",
+      "cz": "Medvěd Baloo",
       "latin": "..."
     },
-    "names": ["name", "meno"],
+    "names": ["Baloo", "Baloo the Bear"],
     "location_data": "BLOB",
-    "title_image": "image/url",
+    "title_image": "/images/animals/baloo.jpg",
     "description": {
-      "en": "description of animal",
-      "cz": "popis zvierata"
+      "en": "Baloo the bear is the best friend of Maugli. A loyal and ever happy companion.",
+      "cz": "Medvěd Baloo, nejlepší kamarát Mauglího. Lojálny a vždy usmívavý společník."
+    },
+    "images": [],
+    "stories": {
+      "kids": {
+        "en": "story about animal for kids",
+        "cz": "pribeh o zvieratku pre deti"
+      },
+      "adults": {
+        "en": "story for adults",
+        "cz": "pribeh pre dospelych"
+      }
+    },
+    "sounds": [
+      "urls"
+    ]
+  },
+
+  {
+    "id": "1",
+    "spieces": {
+      "en": "Donald the duck",
+      "cz": "Káčer Donald",
+      "latin": "..."
+    },
+    "names": ["Donald", "Donald the Duck"],
+    "location_data": "BLOB",
+    "title_image": "/images/animals/donald.jpg",
+    "description": {
+      "en": "Donald the duck, member of the world's most famous quartet with Mickey mouse, Goofy, and Pluto.",
+      "cz": "Káčer Donald, člen nejznámějšího kvarteta na světe s myšákem Mickeym, Goofym a Plutem."
+    },
+    "images": [],
+    "stories": {
+      "kids": {
+        "en": "story about animal for kids",
+        "cz": "pribeh o zvieratku pre deti"
+      },
+      "adults": {
+        "en": "story for adults",
+        "cz": "pribeh pre dospelych"
+      }
+    },
+    "sounds": [
+      "urls"
+    ]
+  },
+
+  {
+    "id": "2",
+    "spieces": {
+      "en": "Jerry the mouse",
+      "cz": "Myšák Jerry",
+      "latin": "..."
+    },
+    "names": ["Jerry", "Jerry the Mouse"],
+    "location_data": "BLOB",
+    "title_image": "/images/animals/jerry.jpg",
+    "description": {
+      "en": "Jerry the mouse, friend and enemy of Tom the cat.",
+      "cz": "Myšák Jerry, přítel i nepřítel kočky Toma."
+    },
+    "images": [],
+    "stories": {
+      "kids": {
+        "en": "story about animal for kids",
+        "cz": "pribeh o zvieratku pre deti"
+      },
+      "adults": {
+        "en": "story for adults",
+        "cz": "pribeh pre dospelych"
+      }
+    },
+    "sounds": [
+      "urls"
+    ]
+  },
+
+  {
+    "id": "3",
+    "spieces": {
+      "en": "Scooby-Doo",
+      "cz": "Scooby-Doo",
+      "latin": "..."
+    },
+    "names": ["Scooby", "Scooby-Doo"],
+    "location_data": "BLOB",
+    "title_image": "/images/animals/scooby.jpg",
+    "description": {
+      "en": "Scooby-Doo detective, ghostbuster, always hungy and scared companion of his friend Shaggy.",
+      "cz": "Scooby-Doo detektiv, lovec duchů, vždy hladový a bojácny společník jeho přítele Shaggyho."
+    },
+    "images": [],
+    "stories": {
+      "kids": {
+        "en": "story about animal for kids",
+        "cz": "pribeh o zvieratku pre deti"
+      },
+      "adults": {
+        "en": "story for adults",
+        "cz": "pribeh pre dospelych"
+      }
+    },
+    "sounds": [
+      "urls"
+    ]
+  },
+
+  {
+    "id": "4",
+    "spieces": {
+      "en": "Winnie the pooh",
+      "cz": "Medvídek Pú",
+      "latin": "..."
+    },
+    "names": ["Winnie", "Pú"],
+    "location_data": "BLOB",
+    "title_image": "/images/animals/winnie.jpg",
+    "description": {
+      "en": "Winnie the pooh may be the only creature to love honey more than bees.",
+      "cz": "Medvídek Pú je snad jediný tvor milující med víc než včely."
     },
     "images": [],
     "stories": {

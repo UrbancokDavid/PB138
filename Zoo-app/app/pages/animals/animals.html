@@ -9,16 +9,14 @@
   <button (click)="doRefresh()">Refresh</button>
   <button (click)="doRefresh(true)">Force Refresh</button>
   <ion-card *ngFor="let item of animals">
-
-    <ion-card-header>
-      <ion-item>
-        {{item.spieces.en}}
-      </ion-item>
-    </ion-card-header>
-
-    <ion-item>
-      {{item.description.en}}
-    </ion-item>
-
+    <img src="{{settings.host}}{{ item.title_image }}"/>
+    <ion-card-content>
+      <ion-card-title>
+        {{ item.spieces.en }}
+      </ion-card-title>
+      <p>
+        {{ item.description.en }}
+      </p>
+    </ion-card-content>
   </ion-card>
 </ion-content>
