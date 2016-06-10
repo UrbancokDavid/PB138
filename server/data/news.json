@@ -15,5 +15,22 @@
     "images": [
       "urls"
     ]
+  },
+  {
+    "id": "2",
+    "title": {
+      "en": "dsajkbkajsdbasfdbjkeajghafdsgjh",
+      "cz": "Jen nepodstana novinka kteru mame"
+    },
+    "title_image": "/images/news/new_title_image.png",
+    "timestamp": 1419038000,
+    "description": {
+      "en": "jKFLSHhlik auyg ifou ysduiu",
+      "cz": "testing"
+    },
+    "url": "/news/0",
+    "images": [
+      "urls"
+    ]
   }
 ]

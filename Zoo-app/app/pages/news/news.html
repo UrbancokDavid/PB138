@@ -6,5 +6,26 @@
 </ion-navbar>
 
 <ion-content class="page3">
+  <!--<ion-refresher (ionRefresh)="doRefresh($event)">-->
+    <!--<ion-refresher-content-->
+        <!--pullingIcon="arrow-dropdown"-->
+        <!--pullingText="Pull to refresh"-->
+        <!--refreshingSpinner="circles"-->
+        <!--refreshingText="Refreshing...">-->
+    <!--</ion-refresher-content>-->
+  <!--</ion-refresher>-->
+  <button (click)="doRefresh(null)">Refresh</button>
+  <ion-card *ngFor="let item of news">
 
+    <ion-card-header>
+      <ion-item>
+        {{item.title.en}}
+      </ion-item>
+    </ion-card-header>
+
+    <ion-item>
+      {{item.description.en}}
+    </ion-item>
+
+  </ion-card>
 </ion-content>
