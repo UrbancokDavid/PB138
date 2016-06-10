@@ -9,7 +9,7 @@ namespace Language {
       case Language.English:
         return "English";
       case Language.Czech:
-        return "Česky";
+        return "Český";
     }
   }
 
