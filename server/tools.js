@@ -9,15 +9,15 @@ const time_unit_to_ms = {
 
 function get_events_in_dates(event_list, from, to) {
   var final_event_list = [];
-  for (var event in event_list) {
+  event_list.forEach((event) => {
     final_event_list = final_event_list.concat(
-      get_event_in_dates(event, from, to)
+      get_event_instances_in_dates(event, from, to)
     );
-  }
+  });
   return final_event_list.sort((e1, e2)=> e1.start_date - e2.start_date);
 }
 
-function get_event_in_dates(event, from, to) {
+function get_event_instances_in_dates(event, from, to) {
   if (event.start_date > to || event.end_date < from || from > to) {
     return [];
   }
@@ -70,7 +70,7 @@ function get_event_in_dates(event, from, to) {
   return event_list;
 }
 
-// function get_event_in_dates(event, from, to) {
+// function get_event_instances_in_dates(event, from, to) {
 //   if (event.start_date > to || event.end_date < from || from < to) {
 //     return [];
 //   }
@@ -181,6 +181,6 @@ function add_event(event_list, old_event, from, to) {
 
 module.exports = {
   is_event_in_range: is_event_in_range,
-  get_event_in_dates: get_event_in_dates,
+  get_event_instances_in_dates: get_event_instances_in_dates,
   get_events_in_dates: get_events_in_dates
 };

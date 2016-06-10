@@ -4,6 +4,8 @@ const Hapi = require('hapi');
 const Good = require('good');
 const Qr = require('qr-image');
 const Inert = require('inert');
+const fs = require('fs');
+const tools = require('./tools');
 
 const server = new Hapi.Server();
 server.connection({ port: 3000 });
@@ -48,9 +50,16 @@ server.route({
   method: 'GET',
   path: '/events',
   handler: function (request, reply) {
-    let response = reply('501 NOT IMPLEMENTED');
-    response.statusCode = 501;
-    return response;
+    let date_from = Date.now();
+    if (request.query['date_from']) {
+      date_from = request.query['date_from'];
+    }
+    let date_to = new Date(
+      date_from + 14*24*60*60*1000 /* 14 days in ms */
+    ).setHours(23,59,59,999);
+    let data = JSON.parse(fs.readFileSync('./data/events.json', 'utf8'));
+
+    return reply(tools.get_events_in_dates(data, date_from, date_to));
   }
 });
 
