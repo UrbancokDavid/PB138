@@ -1,5 +1,6 @@
 import {NavController, Page, Toast} from 'ionic-angular';
 import {GeneralProvider} from '../../providers/general-provider';
+import {Settings} from '../../common/settings'
 
 
 @Page({
@@ -7,6 +8,7 @@ import {GeneralProvider} from '../../providers/general-provider';
 })
 export class Events {
   events = [];
+  settings = Settings;
 
   constructor(
     private nav: NavController,

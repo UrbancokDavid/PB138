@@ -10,16 +10,14 @@
   <button (click)="flushNewsCache()">Flush Cache</button>
   <button (click)="doRefresh(true)">Force Refresh</button>
   <ion-card *ngFor="let item of events">
-
-    <ion-card-header>
-      <ion-item>
-        {{item.title.en}}
-      </ion-item>
-    </ion-card-header>
-
-    <ion-item>
-      {{item.description.en}}
-    </ion-item>
-
+    <img src="{{settings.host}}{{ item.title_image }}"/>
+    <ion-card-content>
+      <ion-card-title>
+        {{ item.title.en }}
+      </ion-card-title>
+      <p>
+        {{ item.description.en }}
+      </p>
+    </ion-card-content>
   </ion-card>
 </ion-content>

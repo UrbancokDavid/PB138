@@ -7,9 +7,13 @@
     },
     "title_image": "/images/news/simba.jpg",
     "timestamp": 1419038000,
-    "description": {
+    "short_description": {
       "en": "On 6 June our zookeepers found a stray kitten on the streets and decided to shelter him amongst the other members of his species.",
       "cz": "6. června naši pracovníci ZOO našli na ulici zatoulané koťátko a rozhodli se ho uchýlit mezi ostatní členy jeho druhu."
+    },
+    "long_description": {
+      "en": "",
+      "cz": ""
     },
     "url": "/news/0",
     "images": [
@@ -25,9 +29,13 @@
     },
     "title_image": "/images/news/nemo.jpg",
     "timestamp": 1419038000,
-    "description": {
+    "short_description": {
       "en": "After a long and difficult search we finally found Nemo, the clownfish lost a few weeks ago.",
       "cz": "Po dlouhém a namáhavém hledání se našel Nemo, který se stratil před pár týdnemi."
+    },
+    "long_description": {
+      "en": "",
+      "cz": ""
     },
     "url": "/news/1",
     "images": [
@@ -43,9 +51,13 @@
     },
     "title_image": "/images/news/garfield.jpg",
     "timestamp": 1419038000,
-    "description": {
+    "short_description": {
       "en": "The worlds heaviest cat, Garfield, gained another 3 kilograms despite his special diet.",
       "cz": "Nejtěžší kočka na světe, Garfield, ztloutnul o dalších 3 kg i napříč jeho speciální dietě."
+    },
+    "long_description": {
+      "en": "",
+      "cz": ""
     },
     "url": "/news/2",
     "images": [

@@ -2,24 +2,64 @@
   {
     "id": "0",
     "title": {
-      "en": "name",
-      "cz": "nazov"
+      "en": "Show of Alex, the lion",
+      "cz": "Šou lva Alexa"
     },
     "description": {
-      "en": "descritpion of event",
-      "cz": "popis udalosti"
+      "en": "Exceptional show of our very own Alex, the lion.",
+      "cz": "Výtečná šou nášho oblíbeného lva Alexa."
     },
-    "url": "url",
-    "title_image": "url",
+    "url": "events/0",
+    "title_image": "/images/events/alex.jpg",
     "images": [],
     "timestamp": 1419038000,
     "start_date": 1419038000,
     "end_date": 1419038000,
-    "all_day": true,
+    "all_day": false,
     "recurrence": {
-      "count": "10",
-      "unit": "day|year|hour|week|month"
+      "count": "1",
+      "unit": "week"
     },
+    "categories": []
+  },
+
+  {
+    "id": "1",
+    "title": {
+      "en": "Cooking with Remy",
+      "cz": "Vaříme s Remy"
+    },
+    "description": {
+      "en": "Cooking our favourite meal - ratatouille with Remy",
+      "cz": "Vaříme naši oblíbenou pochouťku ratatoulle s Remy"
+    },
+    "url": "url",
+    "title_image": "/images/events/remy.jpg",
+    "images": [],
+    "timestamp": 1419038000,
+    "start_date": 1465999200,
+    "end_date": 1466006400,
+    "all_day": false,
+    "categories": []
+  },
+
+  {
+    "id": "2",
+    "title": {
+      "en": "Walking the 101 dalmatians",
+      "cz": "Prochádzka s 101 dalmatíncami"
+    },
+    "description": {
+      "en": "All day walking and playing with the 101 dalmatians.",
+      "cz": "Celodenní zábava a prochádzka s 101 dalmatíncami."
+    },
+    "url": "url",
+    "title_image": "/images/events/dalmatians.jpg",
+    "images": [],
+    "timestamp": 1419038000,
+    "start_date": 1472371200,
+    "end_date": 1472414400,
+    "all_day": true,
     "categories": []
   }
 ]
