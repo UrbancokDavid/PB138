@@ -14,7 +14,9 @@
         <!--refreshingText="Refreshing...">-->
     <!--</ion-refresher-content>-->
   <!--</ion-refresher>-->
-  <button (click)="doRefresh(null)">Refresh</button>
+  <button (click)="doRefresh()">Refresh</button>
+  <button (click)="flushNewsCache()">Flush Cache</button>
+  <button (click)="doRefresh(null, true)">Force Refresh</button>
   <ion-card *ngFor="let item of news">
 
     <ion-card-header>

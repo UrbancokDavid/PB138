@@ -12,15 +12,15 @@ export class NewsData {
 
   constructor(private provider: DataProvider) {}
 
-  loadNews() {
-    if (this.news) {
+  loadNews(force) {
+    if (!force && this.news) {
       return Promise.resolve(this.news);
     }
     return this.provider.get('news');
   }
 
-  getAllNews() {
-  return this.loadNews().then((data: any) => {
+  getAllNews(force) {
+  return this.loadNews(force).then((data: any) => {
       this.news = data;
       var map = {};
       data.forEach(item => {
@@ -44,7 +44,7 @@ export class NewsData {
   }
 
   flushCache() {
-    this.news = [];
+    this.news = null;
     this.news_map = {};
   }
 

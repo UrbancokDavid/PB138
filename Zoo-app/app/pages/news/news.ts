@@ -1,4 +1,4 @@
-import {NavController, Page, Toast, Refresher} from 'ionic-angular';
+import {NavController, Page, Toast} from 'ionic-angular';
 import {NewsData} from '../../providers/news-data'
 
 
@@ -9,12 +9,12 @@ export class Page3 {
   news = [];
 
   constructor(private nav: NavController, private newsData: NewsData) {
-    this.doRefresh(null);
+    this.doRefresh();
   }
 
-  doRefresh(refresher: any) {
+  doRefresh(refresher: any = null, force: boolean = false) {
     console.log("refreshing...");
-    this.newsData.getAllNews().then(news => {
+    this.newsData.getAllNews(force).then(news => {
       this.news = news;
       console.log("done");
     }).catch(() => {
@@ -30,5 +30,9 @@ export class Page3 {
         refresher.complete();
       }
     });
+  }
+
+  flushNewsCache() {
+    this.newsData.flushCache();
   }
 }
