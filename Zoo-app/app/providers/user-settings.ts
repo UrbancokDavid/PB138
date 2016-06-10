@@ -1,5 +1,4 @@
 import {Injectable} from '@angular/core';
-import {Language} from '../common/languages'
 import {Storage, LocalStorage, Events} from 'ionic-angular';
 
 

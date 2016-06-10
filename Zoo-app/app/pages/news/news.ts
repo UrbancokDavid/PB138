@@ -29,8 +29,4 @@ export class News {
       this.nav.present(toast);
     });
   }
-
-  flushNewsCache() {
-    this.newsData.flushCache();
-  }
 }

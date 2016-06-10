@@ -10,5 +10,8 @@
         <ion-option *ngFor="let l of languages " value="{{l.value}}">{{l.title}}</ion-option>
       </ion-select>
     </ion-item>
+    <ion-item>
+      <button block (click)="flushCache()">Flush local cache</button>
+    </ion-item>
   </ion-list>
 </ion-content>

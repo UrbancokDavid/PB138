@@ -30,8 +30,4 @@ export class Animals {
       this.nav.present(toast);
     });
   }
-
-  flushNewsCache() {
-    this.generalProvider.flushCache();
-  }
 }

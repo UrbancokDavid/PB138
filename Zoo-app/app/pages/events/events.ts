@@ -32,8 +32,4 @@ export class Events {
       this.nav.present(toast);
     });
   }
-
-  flushNewsCache() {
-    this.generalProvider.flushCache();
-  }
 }
