@@ -5,7 +5,7 @@ import {NewsData} from '../../providers/news-data'
 @Page({
   templateUrl: 'build/pages/news/news.html'
 })
-export class Page3 {
+export class News {
   news = [];
 
   constructor(private nav: NavController, private newsData: NewsData) {
