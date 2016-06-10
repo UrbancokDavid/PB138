@@ -8,19 +8,22 @@ export class UserSettings {
   keys = {
     language: 'language'
   };
-  language: Language = Language.English;
+  language: string;
+  defaultLanguage = 'en';
   storage = new Storage(LocalStorage);
 
   constructor(private events: Events) {}
 
-  setLanguage(language: Language) {
+  setLanguage(language: string) {
     this.storage.set(this.keys.language, language);
     this.events.publish('language:change');
   }
 
   getLanguage() {
     return this.storage.get(this.keys.language).then(value => {
-      return value;
+      if (value)
+        return value;
+      return this.defaultLanguage;
     });
   }
 }

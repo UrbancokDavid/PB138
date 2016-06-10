@@ -1,5 +1,6 @@
 import {Page, NavController} from 'ionic-angular';
 import {Language} from '../../common/languages';
+import {UserSettings} from '../../providers/user-settings';
 
 
 @Page({
@@ -10,9 +11,16 @@ export class SettingsPage {
     {value: 'en', title: 'English'},
     {value: 'cz', title: 'Český'}
   ];
-  selectedLanguage: string = 'en';
+  selectedLanguage: string;
 
-  constructor(public nav: NavController) {
+  updateLanguage(event) {
+    this.userSettings.setLanguage(this.selectedLanguage);
+    console.log(this.selectedLanguage);
+  }
+
+  constructor(public nav: NavController, private userSettings: UserSettings) {
+    userSettings.getLanguage().then(lang => {
+      this.selectedLanguage = lang;
+    });
   }
 }
-

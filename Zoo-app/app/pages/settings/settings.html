@@ -6,7 +6,7 @@
   <ion-list>
     <ion-item>
       <ion-label>Language</ion-label>
-      <ion-select [(ngModel)]="selectedLanguage">
+      <ion-select [(ngModel)]="selectedLanguage" (ngModelChange)="updateLanguage($event)">
         <ion-option *ngFor="let l of languages " value="{{l.value}}">{{l.title}}</ion-option>
       </ion-select>
     </ion-item>

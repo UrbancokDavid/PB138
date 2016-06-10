@@ -5,14 +5,14 @@ import {TabsPage} from './pages/tabs/tabs';
 import {SettingsPage} from './pages/settings/settings';
 import {QrcodePage} from './pages/qrcode/qrcode';
 import {About} from './pages/about/about';
-import {NewsData} from './providers/news-data';
 import {DataProvider} from './common/data-provider';
+import {UserSettings} from './providers/user-settings';
 import {GeneralProvider} from './providers/general-provider';
 
 
 @App({
   templateUrl: 'build/app.html',
-  providers: [NewsData, DataProvider, GeneralProvider],
+  providers: [DataProvider, GeneralProvider, UserSettings],
   config: {}
 })
 export class MyApp {
