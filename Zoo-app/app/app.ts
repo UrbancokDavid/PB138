@@ -1,7 +1,7 @@
-import {App, Platform, IonicApp, MenuController} from 'ionic-angular';
+import {App, Platform, IonicApp, MenuController, NavController} from 'ionic-angular';
 import {StatusBar} from 'ionic-native';
 import {TabsPage} from './pages/tabs/tabs';
-import {AboutPage} from './pages/about/about';
+import {About} from './pages/about/about';
 import {NewsData} from './providers/news-data';
 import {DataProvider} from './common/data-provider';
 
@@ -9,7 +9,7 @@ import {DataProvider} from './common/data-provider';
 @App({
   templateUrl: 'build/app.html',
   providers: [NewsData, DataProvider],
-  config: {} // http://ionicframework.com/docs/v2/api/config/Config/
+  config: {}
 })
 export class MyApp {
   rootPage: any = TabsPage;
@@ -17,6 +17,7 @@ export class MyApp {
   private platform;
   private menu;
   private pages;
+  private nav;
 
   constructor(app: IonicApp, platform: Platform, menu: MenuController) {
     this.app = app;
@@ -26,19 +27,20 @@ export class MyApp {
     this.initializeApp();
 
     this.pages = [
-      { title: 'About', component: AboutPage}
+      { title: 'About', component: About}
     ];
   };
 
   initializeApp() {
     this.platform.ready().then(() => {
       StatusBar.styleDefault();
+
+      this.nav= this.app.getComponent("nav");
     });
   }
 
   openPage(page) {
     this.menu.close()
-    let nav = this.app.getComponent('nav');
-    nav.setRoot(page.component);
+    this.nav.setRoot(page.component);
   }
 }
