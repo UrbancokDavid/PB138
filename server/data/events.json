@@ -37,8 +37,8 @@
     "title_image": "/images/events/remy.jpg",
     "images": [],
     "timestamp": 1419038000,
-    "start_date": 1465999200,
-    "end_date": 1466006400,
+    "start_date": 1465999200000,
+    "end_date": 1466006400000,
     "all_day": false,
     "categories": []
   },
@@ -57,8 +57,8 @@
     "title_image": "/images/events/dalmatians.jpg",
     "images": [],
     "timestamp": 1419038000,
-    "start_date": 1472371200,
-    "end_date": 1472414400,
+    "start_date": 1465999200000,
+    "end_date": 1466006400000,
     "all_day": true,
     "categories": []
   }

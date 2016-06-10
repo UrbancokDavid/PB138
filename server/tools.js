@@ -22,8 +22,8 @@ function get_event_instances_in_dates(event, from, to) {
     return [];
   }
   if (event.all_day) {
-    event.start_date.setHours(0, 0, 0, 0);
-    event.end_date.setHours(23, 59, 59, 999);
+    event.start_date = new Date(event.start_date).setHours(0, 0, 0, 0);
+    event.end_date = new Date(event.end_date).setHours(23, 59, 59, 999);
   }
   var event_list = [];
   if (!('recurrence' in event)) {
