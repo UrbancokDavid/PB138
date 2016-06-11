@@ -1,0 +1,21 @@
+<ion-navbar *navbar>
+  <ion-title>{{item.species.en}}</ion-title>
+</ion-navbar>
+
+<ion-content padding class="animalinfo">
+  <img src="{{settings.host}}{{item.title_image}}"/>
+  <ion-item>
+    <ion-item-title>Species:</ion-item-title>
+    <ion-item-content>{{item.species.en}}</ion-item-content>
+  </ion-item>
+  <ion-item>
+    <ion-item-title>Latin name:</ion-item-title>
+    <ion-item-content>{{item.species.latin}}</ion-item-content>
+  </ion-item>
+  <ion-item>
+    <ion-item-title>Link:</ion-item-title>
+    <a href="{{item.link}}" target="_blank">more info</a>
+  </ion-item>
+  <h6>Description:</h6>
+  <p>{{item.long_description.en}}</p>
+</ion-content>

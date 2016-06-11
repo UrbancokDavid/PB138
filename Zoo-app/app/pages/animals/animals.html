@@ -25,15 +25,17 @@
         refreshingText="Refreshing...">
     </ion-refresher-content>
   </ion-refresher>
-  <ion-card *ngFor="let item of filteredAnimals" (click)="open(item)">
+  <ion-card *ngFor="let item of filteredAnimals">
     <img src="{{settings.host}}{{ item.title_image }}"/>
     <ion-card-content>
       <ion-card-title>
         {{ item.species.en }}
       </ion-card-title>
       <p>
-        {{ item.description.en }}
+        {{ item.short_description.en }}
       </p>
+      <button (click)="info(item)">More about species</button>
+      <button (click)="open(item)">Individuals</button>
     </ion-card-content>
   </ion-card>
 </ion-content>

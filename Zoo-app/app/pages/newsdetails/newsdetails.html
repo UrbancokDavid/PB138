@@ -7,6 +7,9 @@
     <img src="{{ settings.host }}{{ item.title_image }}"/>
     <ion-card-content>
       {{ item.long_description.en }}
+      <ion-item>
+        <ion-item-title>Entry created on: {{item.timestamp | date: 'dd-MM-yyyy'}}</ion-item-title>
+      </ion-item>
     </ion-card-content>
   </ion-card>
 </ion-content>

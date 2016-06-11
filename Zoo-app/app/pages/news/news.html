@@ -16,6 +16,7 @@
   </ion-refresher>
   <ion-card *ngFor="let item of news" (click)="open(item)">
     <img src="{{settings.host}}{{ item.title_image }}"/>
+    <p align-right>Created: {{item.timestamp | date: 'dd-MM-yyyy'}}</p>
     <ion-card-content>
       <ion-card-title>
         {{ item.title.en }}

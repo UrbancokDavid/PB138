@@ -5,9 +5,13 @@
       "en": "Show of Alex, the lion",
       "cz": "Šou lva Alexa"
     },
-    "description": {
+    "short_description": {
       "en": "Exceptional show of our very own Alex the lion.",
       "cz": "Výtečná šou nášho oblíbeného lva Alexa."
+    },
+    "long_description": {
+      "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacinia, quam eget porttitor egestas, urna orci faucibus tortor, ac condimentum felis nisl vel lacus. Curabitur facilisis tincidunt tellus, non mollis turpis vulputate eget. Fusce nec finibus enim, quis mattis diam. Pellentesque quis pretium enim, ullamcorper iaculis lacus. Sed tellus lorem.",
+      "cz": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacinia, quam eget porttitor egestas, urna orci faucibus tortor, ac condimentum felis nisl vel lacus. Curabitur facilisis tincidunt tellus, non mollis turpis vulputate eget. Fusce nec finibus enim, quis mattis diam. Pellentesque quis pretium enim, ullamcorper iaculis lacus. Sed tellus lorem."
     },
     "url": "events/0",
     "title_image": "/images/events/alex.jpg",
@@ -29,9 +33,13 @@
       "en": "Cooking with Remy",
       "cz": "Vaříme s Remy"
     },
-    "description": {
+    "short_description": {
       "en": "Cooking our favourite meal - ratatouille with Remy",
       "cz": "Vaříme naši oblíbenou pochouťku ratatoulle s Remy"
+    },
+    "long_description": {
+      "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacinia, quam eget porttitor egestas, urna orci faucibus tortor, ac condimentum felis nisl vel lacus. Curabitur facilisis tincidunt tellus, non mollis turpis vulputate eget. Fusce nec finibus enim, quis mattis diam. Pellentesque quis pretium enim, ullamcorper iaculis lacus. Sed tellus lorem.",
+      "cz": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacinia, quam eget porttitor egestas, urna orci faucibus tortor, ac condimentum felis nisl vel lacus. Curabitur facilisis tincidunt tellus, non mollis turpis vulputate eget. Fusce nec finibus enim, quis mattis diam. Pellentesque quis pretium enim, ullamcorper iaculis lacus. Sed tellus lorem."
     },
     "url": "url",
     "title_image": "/images/events/remy.jpg",
@@ -49,9 +57,13 @@
       "en": "Walking the 101 dalmatians",
       "cz": "Prochádzka s 101 dalmatíncami"
     },
-    "description": {
+    "short_description": {
       "en": "All day walking and playing with the 101 dalmatians.",
       "cz": "Celodenní zábava a prochádzka s 101 dalmatíncami."
+    },
+    "long_description": {
+      "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacinia, quam eget porttitor egestas, urna orci faucibus tortor, ac condimentum felis nisl vel lacus. Curabitur facilisis tincidunt tellus, non mollis turpis vulputate eget. Fusce nec finibus enim, quis mattis diam. Pellentesque quis pretium enim, ullamcorper iaculis lacus. Sed tellus lorem.",
+      "cz": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacinia, quam eget porttitor egestas, urna orci faucibus tortor, ac condimentum felis nisl vel lacus. Curabitur facilisis tincidunt tellus, non mollis turpis vulputate eget. Fusce nec finibus enim, quis mattis diam. Pellentesque quis pretium enim, ullamcorper iaculis lacus. Sed tellus lorem."
     },
     "url": "url",
     "title_image": "/images/events/dalmatians.jpg",

@@ -4,118 +4,173 @@
     "species": {
       "en": "The Jungle Book",
       "cz": "Kniha džunglí",
-      "latin": "..."
+      "latin": "Latin Jungle"
     },
     "title_image": "/images/animals/jungle_book.png",
-    "description": {
+    "link": "https://en.wikipedia.org/wiki/The_Jungle_Book",
+    "short_description": {
+      "en": "The Jungle Book (1894) is a collection of stories by English author Rudyard Kipling.",
+      "cz": "Knihy džunglí (1894-1895, The Jungle Book) je dvoudílná kniha dobrodružných povídek a novel, kterou napsal anglický spisovatel Rudyard Kipling."
+    },
+    "long_description": {
       "en": "The Jungle Book (1894) is a collection of stories by English author Rudyard Kipling. The stories were first published in magazines in 1893–94. The original publications contain illustrations, some by the author's father, John Lockwood Kipling. Kipling was born in India and spent the first six years of his childhood there. After about ten years in England, he went back to India and worked there for about six-and-a-half years. These stories were written when Kipling lived in Naulakha, the home he built in Dummerston, Vermont (just north of Brattleboro), in the United States.[1] There is evidence that the collection of stories was written for his daughter Josephine, who died in 1899 at six years of age by pneumonia; a rare first edition of the book with a poignant handwritten note by the author to his young daughter was discovered at the National Trust's Wimpole Hall in Cambridgeshire in 2010.",
       "cz": "Knihy džunglí (1894-1895, The Jungle Book) je dvoudílná kniha dobrodružných povídek a novel, kterou napsal anglický spisovatel Rudyard Kipling, nositel Nobelovy ceny za literaturu za rok 1907. První díl vyšel roku 1894 pod názvem Kniha džunglí (The Jungle Book) a o rok později následovalo pokračování s titulem Druhá kniha džunglí (The Second Jungle Book). Ustálená současná nakladatelská praxe je ale taková, že oba díly jsou obvykle vydávány společně v jednom svazku."
     },
     "location_data": "BLOB",
     "individuals": [
       {
-        "id": "1",
+        "id": "0",
         "name": "Baloo",
         "born": 726841800000,
         "gender": "Male",
-        "image": "/images/animals/baloo.jpg"
+        "image": "/images/animals/baloo.jpg",
+        "about": {
+          "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan nisl mauris. Sed at justo.",
+          "cz": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan nisl mauris. Sed at justo."
+        }
       },
       {
-        "id": "2",
+        "id": "1",
         "name": "Bagheera",
         "born": 720707400000,
         "gender": "Male",
-        "image": "/images/animals/bagheera.jpg"
+        "image": "/images/animals/bagheera.jpg",
+        "about": {
+          "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan nisl mauris. Sed at justo.",
+          "cz": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan nisl mauris. Sed at justo."
+        }
       },
       {
-        "id": "3",
+        "id": "2",
         "name": "Kaa",
         "born": 454077000000,
         "gender": "Male",
-        "image": "/images/animals/kaa.jpg"
+        "image": "/images/animals/kaa.jpg",
+        "about": {
+          "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan nisl mauris. Sed at justo.",
+          "cz": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan nisl mauris. Sed at justo."
+        }
       }
     ]
   },
 
   {
-    "id": "4",
+    "id": "1",
     "species": {
       "en": "Madagascar",
       "cz": "Madagaskar",
-      "latin": "..."
+      "latin": "Latin Madagascar"
     },
     "title_image": "/images/animals/madagascar.jpg",
-    "description": {
+    "link": "https://en.wikipedia.org/wiki/Madagascar_(2005_film)",
+    "short_description": {
+      "en": "Madagascar is a 2005 American computer-animated comedy film produced by DreamWorks Animation",
+      "cz": "Madagaskar (v anglickém originále Madagascar) je počítačem animovaný film z roku 2005."
+    },
+    "long_description": {
       "en": "Madagascar is a 2005 American computer-animated comedy film produced by DreamWorks Animation, and released in theaters on May 27, 2005. The film tells the story of four Central Park Zoo animals who have spent their lives in blissful captivity and are unexpectedly shipped back to Africa, getting shipwrecked on the island of Madagascar. The voices of Ben Stiller, Jada Pinkett Smith, Chris Rock, and David Schwimmer are featured. Other voices include Sacha Baron Cohen, Cedric the Entertainer, and Andy Richter.",
       "cz": "Madagaskar (v anglickém originále Madagascar) je počítačem animovaný film z roku 2005. Filmu se režisérsky ujal Eric Darnell a Tom McGrath a producentem byla Mireille Soria. Film byl vytvořen ve studiu DreamWorks."
     },
     "location_data": "BLOB",
     "individuals": [
       {
-        "id": "5",
+        "id": "0",
         "name": "Alex",
         "born": 499782600000,
         "gender": "Male",
-        "image": "/images/animals/alex.jpg"
+        "image": "/images/animals/alex.jpg",
+        "about": {
+          "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan nisl mauris. Sed at justo.",
+          "cz": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan nisl mauris. Sed at justo."
+        }
       },
       {
-        "id": "6",
+        "id": "1",
         "name": "Marty",
         "born": 484662600000,
         "gender": "Male",
-        "image": "/images/animals/marty.jpg"
+        "image": "/images/animals/marty.jpg",
+        "about": {
+          "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan nisl mauris. Sed at justo.",
+          "cz": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan nisl mauris. Sed at justo."
+        }
       },
       {
-        "id": "7",
+        "id": "2",
         "name": "Gloria",
         "born": 575728200000,
         "gender": "Female",
-        "image": "/images/animals/gloria.jpg"
+        "image": "/images/animals/gloria.jpg",
+        "about": {
+          "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan nisl mauris. Sed at justo.",
+          "cz": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan nisl mauris. Sed at justo."
+        }
       },
       {
-        "id": "8",
+        "id": "3",
         "name": "Melman",
         "born": 431613000000,
         "gender": "Male",
-        "image": "/images/animals/melman.jpg"
+        "image": "/images/animals/melman.jpg",
+        "about": {
+          "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan nisl mauris. Sed at justo.",
+          "cz": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan nisl mauris. Sed at justo."
+        }
       }
     ]
   },
 
   {
-    "id": "9",
+    "id": "2",
     "species": {
       "en": "Disney",
       "cz": "Disney",
-      "latin": "..."
+      "latin": "Latin Disney"
     },
     "title_image": "/images/animals/disney.png",
-    "description": {
-      "en": "Disney was founded on October 16, 1923, by Walt Disney and Roy O. Disney as the Disney Brothers Cartoon Studio, and established itself as a leader in the American animation industry before diversifying into live-action film production, television, and theme parks. The company has operated under the names The Walt Disney Studio and Walt Disney Productions. Taking on its current name in 1986, Disney expanded its existing operations and started divisions focused upon theater, radio, music, publishing, and online media.",
+    "link": "https://en.wikipedia.org/wiki/The_Walt_Disney_Company",
+    "short_description": {
+      "en": "Disney was founded on October 16, 1923, by Walt Disney and Roy O. Disney as the Disney Brothers Cartoon Studio.",
       "cz": "The Walt Disney Company (česky Společnost Walta Disneyho a zjednodušeně Disney, NYSE: DIS) je jedna z největších mediálních a zábavních společností na světě. Založili ji bratři Walt a Roy Disneyovi 16. října 1923 jako původně animované studio Disney Brothers Studio, později Walt Disney Productions. Brzy se The Walt Disney Company stala jedním z největších hollywoodských studií (Walt Disney Pictures, Pixar, Marvel a Lucasfilm) a vlastníkem několika televizních stanic včetně ABC a ESPN. První a nejznámější animovaná postavička studia Disney, Mickey Mouse, je oficiální maskot The Walt Disney Company."
+    },
+    "long_description": {
+      "en": "Disney was founded on October 16, 1923, by Walt Disney and Roy O. Disney as the Disney Brothers Cartoon Studio, and established itself as a leader in the American animation industry before diversifying into live-action film production, television, and theme parks. The company has operated under the names The Walt Disney Studio and Walt Disney Productions. Taking on its current name in 1986, Disney expanded its existing operations and started divisions focused upon theater, radio, music, publishing, and online media.",
+      "cz": "The Walt Disney Company (česky Společnost Walta Disneyho a zjednodušeně Disney, NYSE: DIS) je jedna z největších mediálních a zábavních společností na světě."
     },
     "location_data": "BLOB",
     "individuals": [
       {
-        "id": "10",
+        "id": "0",
         "name": "Mickey",
         "born": 679494600000,
         "gender": "Male",
-        "image": "/images/animals/mickey.jpg"
+        "image": "/images/animals/mickey.jpg",
+        "about": {
+          "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan nisl mauris. Sed at justo.",
+          "cz": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan nisl mauris. Sed at justo."
+        }
       },
       {
-        "id": "11",
+        "id": "1",
         "name": "Donald",
         "born": 650291400000,
         "gender": "Male",
-        "image": "/images/animals/donald.jpg"
+        "image": "/images/animals/donald.jpg",
+        "about": {
+          "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan nisl mauris. Sed at justo.",
+          "cz": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan nisl mauris. Sed at justo."
+        }
       },
       {
-        "id": "12",
+        "id": "2",
         "name": "Goofy",
         "born": 715005000000,
         "gender": "Male",
-        "image": "/images/animals/goofy.jpg"
+        "image": "/images/animals/goofy.jpg",
+        "about": {
+          "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan nisl mauris. Sed at justo.",
+          "cz": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan nisl mauris. Sed at justo."
+        }
       }
     ]
   }
