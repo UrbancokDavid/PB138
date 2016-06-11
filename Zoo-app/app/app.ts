@@ -63,10 +63,14 @@ export class MyApp {
           return;
         }
         if (!result.text.startWith(prefix)) {
-          Tools.showInfoToast(this.nav, 'Invalid format link format', 'Close');
+          setTimeout(() => {
+            Tools.showInfoToast(this.nav, 'Invalid format link format', 'Close');
+          }, 1000);
         }
         let link = result.text.split(prefix).slice(1).join(prefix);
-        Tools.showInfoToast(this.nav, 'Link: ' + link, 'Close');
+        setTimeout(() => {
+          Tools.showInfoToast(this.nav, 'Link: ' + link, 'Close');
+        }, 1000);
       },
       (error) => {
         Tools.showInfoToast(this.nav, 'Scanning failed!', 'Close');
