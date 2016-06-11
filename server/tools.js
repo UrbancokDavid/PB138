@@ -42,7 +42,7 @@ function get_event_instances_in_dates(event, from, to) {
     case 'day':
     case 'week':
       get_next_fn = (timestamp, count) => {
-        get_next_generic(offset, timestamp, count)
+        return get_next_generic(offset, timestamp, count);
       };
       break;
     case 'year':
@@ -51,20 +51,26 @@ function get_event_instances_in_dates(event, from, to) {
     case 'month':
       get_next_fn = get_next_month;
       break;
+    default:
+      return [];
   }
   var cur_start = event.start_date;
   var cur_end;
   if (event.start_date < from) {
     // find first event occurrence that starts before specified date range
-    cur_start = get_next_fn(cur_start, (from - event_list.start_date)/offset);
+    cur_start = get_next_fn(
+        cur_start,
+        (
+          (from - event.start_date)/(offset*event.recurrence.count)
+        )*event.recurrence.count)
   }
 
-  while (cur_start <= event.to) {
+  while (cur_start <= to) {
     cur_end = cur_start + event_length;
     if (is_event_in_range(cur_start, cur_end, from, to)) {
-      add_event(event_list, cur_start, cur_end);
+      add_event(event_list, event, cur_start, cur_end);
     }
-    cur_start = get_next_fn(cur_start, 1);
+    cur_start = get_next_fn(cur_start, event.recurrence.count);
   }
   return event_list;
 }

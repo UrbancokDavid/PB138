@@ -13,8 +13,8 @@
     "title_image": "/images/events/alex.jpg",
     "images": [],
     "timestamp": 1419038000,
-    "start_date": 1419038000,
-    "end_date": 1419038000,
+    "start_date": 1465999200000,
+    "end_date": 1466006400000,
     "all_day": false,
     "recurrence": {
       "count": "1",
