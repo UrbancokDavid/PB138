@@ -15,7 +15,6 @@ export class DataProvider {
       this.http.get(host + request).subscribe(
         res => {
           var data = res.json();
-          console.log(data);
           resolve(data);
         },
         error => {

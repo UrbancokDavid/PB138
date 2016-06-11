@@ -27,10 +27,8 @@ export class Events {
   }
 
   doRefresh(refresher: Refresher = null, force: boolean = false) {
-    console.log("refreshing...");
     this.generalProvider.getAllEvents(force).then(events => {
       this.events = events;
-      console.log("done");
     }).catch(() => {
       Tools.showInfoToast(
         this.nav, this.localize('connection_problem'), this.localize('cancel')

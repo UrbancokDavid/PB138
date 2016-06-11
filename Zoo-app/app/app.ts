@@ -68,11 +68,6 @@ export class MyApp {
     this.initializeApp();
   };
 
-  test() {
-    console.log(this.translate.currentLang);
-    console.log(this.translate.get("scan_qr")['value']);
-  }
-
   localize(val) {
     return this.translate.get(val)['value'];
   }

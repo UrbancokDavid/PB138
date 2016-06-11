@@ -52,11 +52,9 @@ export class Animals {
   }
 
   doRefresh(refresher: Refresher = null, force: boolean = false) {
-    console.log("refreshing...");
     this.generalProvider.getAllAnimals(force).then(animals => {
       this.animals = animals;
       this.filterAnimals();
-      console.log("done");
     }).catch((error) => {
       Tools.showInfoToast(
         this.nav, this.localize('connection_problem'), this.localize('cancel')
