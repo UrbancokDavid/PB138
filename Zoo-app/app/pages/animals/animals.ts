@@ -38,12 +38,8 @@ export class Animals {
     console.log("query: " + str);
 
     this.filteredAnimals = this.animals.filter(item => {
-      return (item['spieces']['en'].toLocaleLowerCase().indexOf(str) > -1);
+      return (item['species']['en'].toLocaleLowerCase().indexOf(str) > -1);
     });
-  }
-
-  onCancel() {
-    console.log("searchbar cancel");
   }
 
   doRefresh(refresher: Refresher = null, force: boolean = false) {
