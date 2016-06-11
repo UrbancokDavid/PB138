@@ -1,15 +1,15 @@
 <ion-navbar *navbar>
-  <ion-title>{{ item.title.en }}</ion-title>
+  <ion-title>{{ item.title[translate.currentLang] }}</ion-title>
 </ion-navbar>
 
 <ion-content padding class="newsdetails">
-  <ion-card>
-    <img src="{{ settings.host }}{{ item.title_image }}"/>
-    <ion-card-content>
-      {{ item.long_description.en }}
-      <ion-item>
-        <ion-item-title>Entry created on: {{item.timestamp | date: 'dd-MM-yyyy'}}</ion-item-title>
-      </ion-item>
-    </ion-card-content>
-  </ion-card>
+  <img src="{{ settings.host }}{{ item.title_image }}"/>
+  <ion-card-content>
+    {{ item.long_description[translate.currentLang] }}
+    <ion-item>
+      <ion-item-title>
+        {{'entry_created' | translate}}: {{item.timestamp | date: 'dd-MM-yyyy'}}
+      </ion-item-title>
+    </ion-item>
+  </ion-card-content>
 </ion-content>

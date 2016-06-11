@@ -1,17 +1,19 @@
 <ion-navbar *navbar>
-  <ion-title>Settings</ion-title>
+  <ion-title>{{'settings' | translate}}</ion-title>
 </ion-navbar>
 
 <ion-content padding class="settings">
   <ion-list>
     <ion-item>
-      <ion-label>Language</ion-label>
+      <ion-label>{{'language' | translate}}</ion-label>
       <ion-select [(ngModel)]="selectedLanguage" (ngModelChange)="updateLanguage($event)">
         <ion-option *ngFor="let l of languages " value="{{l.value}}">{{l.title}}</ion-option>
       </ion-select>
     </ion-item>
     <ion-item>
-      <button block (click)="flushCache()">Flush local cache</button>
+      <button block (click)="flushCache()">
+        {{'flush_cache' | translate}}
+      </button>
     </ion-item>
   </ion-list>
 </ion-content>

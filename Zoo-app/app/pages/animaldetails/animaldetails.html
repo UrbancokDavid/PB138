@@ -1,22 +1,30 @@
 <ion-navbar *navbar>
-  <ion-title>{{ item.species.en }}</ion-title>
+  <ion-title>{{ item.species[translate.currentLang] }}</ion-title>
 </ion-navbar>
 
-<ion-content padding class="animaldetails">
+<ion-content class="animaldetails">
   <ion-slides pager>
     <ion-slide *ngFor="let individual of item.individuals">
       <h1>{{individual.name}}</h1>
       <img src="{{settings.host}}{{individual.image}}"/>
       <ion-item>
-        <ion-item-title>Gender:</ion-item-title>
-        <ion-item-content>{{individual.gender}}</ion-item-content>
+        <ion-item-title>
+          {{'gender' | translate}}:
+        </ion-item-title>
+        <ion-item-content>
+          {{individual.gender}}
+        </ion-item-content>
       </ion-item>
       <ion-item>
-        <ion-item-title>Born:</ion-item-title>
-        <ion-item-content>{{individual.born | date:'dd-MM-yyyy'}}</ion-item-content>
+        <ion-item-title>
+          {{'born' | translate}}:
+        </ion-item-title>
+        <ion-item-content>
+          {{individual.born | date:'dd-MM-yyyy'}}
+        </ion-item-content>
       </ion-item>
-      <h6>About:</h6>
-      <p>{{individual.about.en}}</p>
+      <h6>{{'about' | translate}}:</h6>
+      <p padding>{{individual.about[translate.currentLang]}}</p>
     </ion-slide>
   </ion-slides>
 </ion-content>

@@ -1,16 +1,18 @@
 <ion-navbar *navbar>
-  <ion-title>{{ item.title.en }}</ion-title>
+  <ion-title>{{ item.title[translate.currentLang] }}</ion-title>
 </ion-navbar>
 
 <ion-content padding class="eventdetails">
-  <ion-card>
-    <img src="{{ settings.host }}{{ item.title_image }}"/>
-    <ion-card-content>
-      <ion-item>Start: {{item.start_date | date:'dd-MM-yyyy HH:mm:ss'}}</ion-item>
-      <ion-item>End: {{item.end_date | date:'dd-MM-yyyy HH:mm:ss'}}</ion-item>
-    </ion-card-content>
-    <p>
-      {{ item.long_description.en }}
-    </p>
-  </ion-card>
+  <img src="{{ settings.host }}{{ item.title_image }}"/>
+  <ion-card-content>
+    <ion-item>
+      {{'start' | translate}}: {{item.start_date | date:'dd-MM-yyyy HH:mm:ss'}}
+    </ion-item>
+    <ion-item>
+      {{'end' | translate}}: {{item.end_date | date:'dd-MM-yyyy HH:mm:ss'}}
+    </ion-item>
+  </ion-card-content>
+  <p>
+    {{ item.long_description[translate.currentLang] }}
+  </p>
 </ion-content>

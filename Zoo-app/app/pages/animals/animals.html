@@ -2,17 +2,19 @@
   <button menuToggle *ngIf="!searchBarVisible">
     <ion-icon name="menu"></ion-icon>
   </button>
-  <ion-title *ngIf="!searchBarVisible">Animals</ion-title>
+  <ion-title *ngIf="!searchBarVisible">{{'animals' | translate}}</ion-title>
   <ion-buttons right *ngIf="!searchBarVisible">
     <button (click)="showSearchBar()">
       <ion-icon name="search"></ion-icon>
     </button>
   </ion-buttons>
   <ion-searchbar
+      placeholder="{{'search' | translate}}"
       *ngIf="searchBarVisible"
       [(ngModel)]="searchString"
       (input)="filterAnimals()"
-      (cancel)="hideSearchBar()">
+      (cancel)="hideSearchBar()"
+  >
   </ion-searchbar>
 </ion-navbar>
 
@@ -20,22 +22,27 @@
   <ion-refresher (refresh)="doRefresh($event, true)">
     <ion-refresher-content
         pullingIcon="arrow-dropdown"
-        pullingText="Pull to refresh"
+        pullingText="{{'pull_to_refresh' | translate}}"
         refreshingSpinner="circles"
-        refreshingText="Refreshing...">
+        refreshingText="{{'refreshing' | translate}}..."
+    >
     </ion-refresher-content>
   </ion-refresher>
   <ion-card *ngFor="let item of filteredAnimals">
     <img src="{{settings.host}}{{ item.title_image }}"/>
     <ion-card-content>
       <ion-card-title>
-        {{ item.species.en }}
+        {{ item.species[translate.currentLang] }}
       </ion-card-title>
       <p>
-        {{ item.short_description.en }}
+        {{ item.short_description[translate.currentLang] }}
       </p>
-      <button (click)="info(item)">More about species</button>
-      <button (click)="open(item)">Individuals</button>
+      <button (click)="info(item)">
+        {{'more_about_species' | translate}}
+      </button>
+      <button (click)="open(item)">
+        {{'individuals' | translate}}
+      </button>
     </ion-card-content>
   </ion-card>
 </ion-content>

@@ -2,27 +2,30 @@
   <button menuToggle>
     <ion-icon name="menu"></ion-icon>
   </button>
-  <ion-title>News</ion-title>
+  <ion-title>{{'news' | translate}}</ion-title>
 </ion-navbar>
 
 <ion-content class="news">
   <ion-refresher (refresh)="doRefresh($event, true)">
     <ion-refresher-content
         pullingIcon="arrow-dropdown"
-        pullingText="Pull to refresh"
+        pullingText="{{'pull_to_refresh' | translate}}"
         refreshingSpinner="circles"
-        refreshingText="Refreshing...">
+        refreshingText="{{'refreshing' | translate}}..."
+    >
     </ion-refresher-content>
   </ion-refresher>
   <ion-card *ngFor="let item of news" (click)="open(item)">
     <img src="{{settings.host}}{{ item.title_image }}"/>
-    <p align-right>Created: {{item.timestamp | date: 'dd-MM-yyyy'}}</p>
+    <p align-right>
+      {{'created' | translate}}: {{item.timestamp | date: 'dd-MM-yyyy'}}
+    </p>
     <ion-card-content>
       <ion-card-title>
-        {{ item.title.en }}
+        {{ item.title[translate.currentLang] }}
       </ion-card-title>
       <p>
-        {{ item.short_description.en }}
+        {{ item.short_description[translate.currentLang] }}
       </p>
     </ion-card-content>
   </ion-card>

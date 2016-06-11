@@ -7,10 +7,10 @@
     <ion-content>
         <ion-list>
             <button ion-item *ngFor="let p of pages" (click)="openPage(p)">
-                {{p.title}}
+                {{p.title | translate}}
             </button>
             <button ion-item (click)="scanQrCode()">
-                Scan QR code
+                {{'scan_qr' | translate}}
             </button>
         </ion-list>
     </ion-content>

@@ -2,26 +2,30 @@
   <button menuToggle>
     <ion-icon name="menu"></ion-icon>
   </button>
-  <ion-title>Events</ion-title>
+  <ion-title>{{'events' | translate}}</ion-title>
 </ion-navbar>
 
 <ion-content class="events">
   <ion-refresher (refresh)="doRefresh($event, true)">
     <ion-refresher-content
         pullingIcon="arrow-dropdown"
-        pullingText="Pull to refresh"
+        pullingText="{{'pull_to_refresh' | translate}}"
         refreshingSpinner="circles"
-        refreshingText="Refreshing...">
+        refreshingText="{{'refreshing' | translate}}..."
+    >
     </ion-refresher-content>
   </ion-refresher>
   <ion-card *ngFor="let item of events" (click)="open(item)">
     <img src="{{settings.host}}{{ item.title_image }}"/>
     <ion-card-content>
       <ion-card-title>
-        {{ item.title.en }}
+        {{ item.title[translate.currentLang] }}
       </ion-card-title>
-      <p><ion-icon name="calendar"></ion-icon> {{item.start_date | date:'dd-MM-yyyy'}}</p>
-      <p>{{ item.short_description.en }}</p>
+      <p>
+        <ion-icon name="calendar"></ion-icon>
+        {{item.start_date | date:'dd-MM-yyyy'}}
+      </p>
+      <p>{{ item.short_description[translate.currentLang] }}</p>
     </ion-card-content>
   </ion-card>
 </ion-content>

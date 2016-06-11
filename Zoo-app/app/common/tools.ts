@@ -2,7 +2,7 @@ import {NavController, Toast} from 'ionic-angular';
 
 export module Tools {
   export function showInfoToast(
-    nav: NavController,message: string, cancelButton: string = null
+    nav: NavController, message: string, cancelButton: string = null
   ) {
     let toast = Toast.create({
       message: message,

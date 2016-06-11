@@ -15,7 +15,7 @@ export class UserSettings {
 
   setLanguage(language: string) {
     this.storage.set(this.keys.language, language);
-    this.events.publish('language:change');
+    this.events.publish('language:change', language);
   }
 
   getLanguage() {

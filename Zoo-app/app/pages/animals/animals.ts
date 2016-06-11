@@ -1,12 +1,15 @@
-import {NavController, Page, Toast, Refresher} from 'ionic-angular';
+import {NavController, Page, Refresher} from 'ionic-angular';
 import {GeneralProvider} from '../../providers/general-provider';
 import {Settings} from '../../common/settings';
 import {AnimaldetailsPage} from "../animaldetails/animaldetails";
 import {AnimalinfoPage} from "../animalinfo/animalinfo";
+import {TranslateService, TranslatePipe} from 'ng2-translate/ng2-translate';
+import {Tools} from '../../common/tools';
 
 
 @Page({
   templateUrl: 'build/pages/animals/animals.html',
+  pipes: [TranslatePipe]
 })
 export class Animals {
   animals = [];
@@ -17,7 +20,8 @@ export class Animals {
 
   constructor(
     private nav: NavController,
-    private generalProvider: GeneralProvider
+    private generalProvider: GeneralProvider,
+    private translate: TranslateService
   ) {
     this.doRefresh();
   }
@@ -43,6 +47,10 @@ export class Animals {
     });
   }
 
+  localize(val) {
+    return this.translate.get(val)['value'];
+  }
+
   doRefresh(refresher: Refresher = null, force: boolean = false) {
     console.log("refreshing...");
     this.generalProvider.getAllAnimals(force).then(animals => {
@@ -50,14 +58,9 @@ export class Animals {
       this.filterAnimals();
       console.log("done");
     }).catch((error) => {
-      console.log("failed");
-      console.log(error);
-      let toast = Toast.create({
-        message: 'Unable to connect to server.',
-        showCloseButton: true,
-        duration: 3000
-      });
-      this.nav.present(toast);
+      Tools.showInfoToast(
+        this.nav, this.localize('connection_problem'), this.localize('cancel')
+      );
     }).then(() => {
       if (refresher) {
         refresher.complete();
