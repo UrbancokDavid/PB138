@@ -2,8 +2,8 @@
   {
     "id": "0",
     "title": {
-        "en": "Meet Simba, the newest addition to our ZOO",
-        "cz": "Spoznejte Simbu, nejnovějšího člena našej ZOO"
+        "en": "Meet Simba",
+        "cz": "Spoznejte Simbu"
     },
     "title_image": "/images/news/simba.jpg",
     "timestamp": 1419038000,
@@ -12,8 +12,8 @@
       "cz": "6. června naši pracovníci ZOO našli na ulici zatoulané koťátko a rozhodli se ho uchýlit mezi ostatní členy jeho druhu."
     },
     "long_description": {
-      "en": "",
-      "cz": ""
+      "en": "The Lion King is a 1994 American animated epic musical film produced by Walt Disney Feature Animation and released by Walt Disney Pictures.",
+      "cz": "Lví král (v anglickém originále The Lion King) je americký animovaný film z roku 1994 režisérů Roba Minkoffa a Rogera Allersa."
     },
     "url": "/news/0",
     "images": [
@@ -34,8 +34,8 @@
       "cz": "Po dlouhém a namáhavém hledání se našel Nemo, který se stratil před pár týdnemi."
     },
     "long_description": {
-      "en": "",
-      "cz": ""
+      "en": "Finding Nemo is a 2003 American computer-animated comedy adventure film produced by Pixar Animation Studios.",
+      "cz": "Hledá se Nemo (v anglickém originále Finding Nemo) je americký počítačem animovaný film z roku 2003."
     },
     "url": "/news/1",
     "images": [
@@ -56,8 +56,8 @@
       "cz": "Nejtěžší kočka na světe, Garfield, ztloutnul o dalších 3 kg i napříč jeho speciální dietě."
     },
     "long_description": {
-      "en": "",
-      "cz": ""
+      "en": "Garfield is an American comic strip created by Jim Davis. Published since 1978, it chronicles the life of the title character, the cat Garfield, Jon, his owner, and Jon's dog, Odie.",
+      "cz": "Garfield je komiks vytvářený Jimem Davisem. Vyšel poprvé dne 19. června 1978 a v hlavních rolích se v něm představuje líný kocour Garfield."
     },
     "url": "/news/2",
     "images": [

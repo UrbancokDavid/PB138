@@ -1,0 +1,12 @@
+<ion-navbar *navbar>
+  <ion-title>{{ item.title.en }}</ion-title>
+</ion-navbar>
+
+<ion-content padding class="newsdetails">
+  <ion-card>
+    <img src="{{ settings.host }}{{ item.title_image }}"/>
+    <ion-card-content>
+      {{ item.long_description.en }}
+    </ion-card-content>
+  </ion-card>
+</ion-content>

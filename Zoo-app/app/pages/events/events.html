@@ -14,15 +14,14 @@
         refreshingText="Refreshing...">
     </ion-refresher-content>
   </ion-refresher>
-  <ion-card *ngFor="let item of events">
+  <ion-card *ngFor="let item of events" (click)="open(item)">
     <img src="{{settings.host}}{{ item.title_image }}"/>
     <ion-card-content>
       <ion-card-title>
         {{ item.title.en }}
       </ion-card-title>
-      <p>
-        {{ item.description.en }}
-      </p>
+      <p><ion-icon name="calendar"></ion-icon> {{item.start_date | date:'dd-MM-yyyy'}}</p>
+      <p>{{ item.description.en }}</p>
     </ion-card-content>
   </ion-card>
 </ion-content>

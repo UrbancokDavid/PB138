@@ -1,7 +1,7 @@
 import {NavController, Page, Toast, Refresher} from 'ionic-angular';
 import {GeneralProvider} from '../../providers/general-provider';
 import {Settings} from '../../common/settings';
-import {Tools} from '../../common/tools';
+import {AnimaldetailsPage} from "../animaldetails/animaldetails";
 
 
 @Page({
@@ -66,5 +66,9 @@ export class Animals {
         refresher.complete();
       }
     });
+  }
+
+  open(item) {
+    this.nav.push(AnimaldetailsPage, item);
   }
 }

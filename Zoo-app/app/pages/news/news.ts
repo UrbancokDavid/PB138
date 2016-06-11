@@ -1,6 +1,7 @@
 import {NavController, Page, Toast, Refresher} from 'ionic-angular';
 import {GeneralProvider} from '../../providers/general-provider';
 import {Settings} from '../../common/settings'
+import {NewsdetailsPage} from "../newsdetails/newsdetails";
 
 
 @Page({
@@ -32,5 +33,9 @@ export class News {
         refresher.complete();
       }
     });
+  }
+  
+  open(item) {
+    this.nav.push(NewsdetailsPage, item);
   }
 }

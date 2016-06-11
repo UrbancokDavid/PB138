@@ -1,0 +1,36 @@
+<ion-navbar *navbar>
+  <ion-title>{{ item.species.en }}</ion-title>
+</ion-navbar>
+
+<ion-content padding class="animaldetails">
+  <ion-slides pager>
+
+    <ion-slide>
+      <img src="{{settings.host}}{{ item.title_image }}"/>
+      <ion-item>
+        <ion-item-title>Names:</ion-item-title>
+        <p *ngFor="let name of item.names">{{name}}</p>
+      </ion-item>
+      <h4>Description:</h4>
+      <p>{{item.description.en}}</p>
+    </ion-slide>
+
+    <ion-slide>
+      <h2>Detailed information:</h2>
+      <ion-item>
+        <ion-item-title>Latin name:</ion-item-title>
+        <p>{{item.species.latin}}</p>
+      </ion-item>
+      <ion-item>
+        <ion-item-title>Location:</ion-item-title>
+        <p></p>
+      </ion-item>
+      <ion-item>
+        <ion-item-content>
+          <ion-item-title>Story:</ion-item-title>
+          <p>{{item.stories.adults.en}}</p>
+        </ion-item-content>
+      </ion-item>
+    </ion-slide>
+
+  </ion-slides>
