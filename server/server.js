@@ -12,14 +12,6 @@ server.connection({ port: 3000 });
 
 server.route({
   method: 'GET',
-  path: '/',
-  handler: function (request, reply) {
-    reply('Hello, world!');
-  }
-});
-
-server.route({
-  method: 'GET',
   path: '/qr_code',
   handler: function (request, reply) {
     let str = request.query.text ? request.query.text : 'ZOO App!';
@@ -108,14 +100,6 @@ server.route({
     let data = JSON.parse(fs.readFileSync('./data/events.json', 'utf8'));
 
     return reply(tools.get_events_in_dates(data, date_from, date_to));
-  }
-});
-
-server.route({
-  method: 'GET',
-  path: '/{name}',
-  handler: function (request, reply) {
-    reply('Hello, ' + encodeURIComponent(request.params.name) + '!');
   }
 });
 
