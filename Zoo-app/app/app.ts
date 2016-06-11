@@ -1,5 +1,6 @@
 import {ViewChild} from '@angular/core';
 import {App, Platform, MenuController, Nav} from 'ionic-angular';
+import {Routes} from '@angular/router';
 import {StatusBar} from 'ionic-native';
 import {TabsPage} from './pages/tabs/tabs';
 import {SettingsPage} from './pages/settings/settings';
@@ -15,6 +16,15 @@ import {GeneralProvider} from './providers/general-provider';
   providers: [DataProvider, GeneralProvider, UserSettings],
   config: {}
 })
+@Routes([
+  { path: '/set', component: SettingsPage },
+  { path: '/qr', component: QrcodePage },
+  { path: '/about/:id', component: About }
+])
+/*
+Routing doesn't work in Ionic curretly:
+ https://github.com/driftyco/ionic/issues/5479
+ */
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
   rootPage: any = TabsPage;
