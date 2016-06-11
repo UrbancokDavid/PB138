@@ -2,150 +2,121 @@
   {
     "id": "0",
     "species": {
-      "en": "Baloo the bear",
-      "cz": "Medvěd Baloo",
-      "latin": "Ursus maritimus"
+      "en": "The Jungle Book",
+      "cz": "Kniha džunglí",
+      "latin": "..."
     },
-    "names": ["Baloo", "Baloo the Bear"],
-    "location_data": "BLOB",
-    "title_image": "/images/animals/baloo.jpg",
+    "title_image": "/images/animals/jungle_book.png",
     "description": {
-      "en": "Baloo the bear is the best friend of Maugli. A loyal and ever happy companion.",
-      "cz": "Medvěd Baloo, nejlepší kamarát Mauglího. Lojálny a vždy usmívavý společník."
+      "en": "The Jungle Book (1894) is a collection of stories by English author Rudyard Kipling. The stories were first published in magazines in 1893–94. The original publications contain illustrations, some by the author's father, John Lockwood Kipling. Kipling was born in India and spent the first six years of his childhood there. After about ten years in England, he went back to India and worked there for about six-and-a-half years. These stories were written when Kipling lived in Naulakha, the home he built in Dummerston, Vermont (just north of Brattleboro), in the United States.[1] There is evidence that the collection of stories was written for his daughter Josephine, who died in 1899 at six years of age by pneumonia; a rare first edition of the book with a poignant handwritten note by the author to his young daughter was discovered at the National Trust's Wimpole Hall in Cambridgeshire in 2010.",
+      "cz": "Knihy džunglí (1894-1895, The Jungle Book) je dvoudílná kniha dobrodružných povídek a novel, kterou napsal anglický spisovatel Rudyard Kipling, nositel Nobelovy ceny za literaturu za rok 1907. První díl vyšel roku 1894 pod názvem Kniha džunglí (The Jungle Book) a o rok později následovalo pokračování s titulem Druhá kniha džunglí (The Second Jungle Book). Ustálená současná nakladatelská praxe je ale taková, že oba díly jsou obvykle vydávány společně v jednom svazku."
     },
-    "images": [],
-    "stories": {
-      "kids": {
-        "en": "story about animal for kids",
-        "cz": "pribeh o zvieratku pre deti"
-      },
-      "adults": {
-        "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mattis enim quis sem mattis sodales. Sed non nulla efficitur, faucibus sem eu, imperdiet ex. ",
-        "cz": "pribeh pre dospelych"
-      }
-    },
-    "sounds": [
-      "urls"
-    ]
-  },
-
-  {
-    "id": "1",
-    "species": {
-      "en": "Donald the duck",
-      "cz": "Káčer Donald",
-      "latin": "Cairina moschata"
-    },
-    "names": ["Donald", "Donald the Duck"],
     "location_data": "BLOB",
-    "title_image": "/images/animals/donald.jpg",
-    "description": {
-      "en": "Donald the duck, member of the world's most famous quartet with Mickey mouse, Goofy, and Pluto.",
-      "cz": "Káčer Donald, člen nejznámějšího kvarteta na světe s myšákem Mickeym, Goofym a Plutem."
-    },
-    "images": [],
-    "stories": {
-      "kids": {
-        "en": "story about animal for kids",
-        "cz": "pribeh o zvieratku pre deti"
+    "individuals": [
+      {
+        "id": "1",
+        "name": "Baloo",
+        "born": 726841800000,
+        "gender": "Male",
+        "image": "/images/animals/baloo.jpg"
       },
-      "adults": {
-        "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mattis enim quis sem mattis sodales. Sed non nulla efficitur, faucibus sem eu, imperdiet ex. ",
-        "cz": "pribeh pre dospelych"
-      }
-    },
-    "sounds": [
-      "urls"
-    ]
-  },
-
-  {
-    "id": "2",
-    "species": {
-      "en": "Jerry the mouse",
-      "cz": "Myšák Jerry",
-      "latin": "Mus musculus"
-    },
-    "names": ["Jerry", "Jerry the Mouse"],
-    "location_data": "BLOB",
-    "title_image": "/images/animals/jerry.jpg",
-    "description": {
-      "en": "Jerry the mouse, friend and enemy of Tom the cat.",
-      "cz": "Myšák Jerry, přítel i nepřítel kočky Toma."
-    },
-    "images": [],
-    "stories": {
-      "kids": {
-        "en": "story about animal for kids",
-        "cz": "pribeh o zvieratku pre deti"
+      {
+        "id": "2",
+        "name": "Bagheera",
+        "born": 720707400000,
+        "gender": "Male",
+        "image": "/images/animals/bagheera.jpg"
       },
-      "adults": {
-        "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mattis enim quis sem mattis sodales. Sed non nulla efficitur, faucibus sem eu, imperdiet ex. ",
-        "cz": "pribeh pre dospelych"
+      {
+        "id": "3",
+        "name": "Kaa",
+        "born": 454077000000,
+        "gender": "Male",
+        "image": "/images/animals/kaa.jpg"
       }
-    },
-    "sounds": [
-      "urls"
-    ]
-  },
-
-  {
-    "id": "3",
-    "species": {
-      "en": "Scooby-Doo",
-      "cz": "Scooby-Doo",
-      "latin": "Canis familiaris"
-    },
-    "names": ["Scooby", "Scooby-Doo"],
-    "location_data": "BLOB",
-    "title_image": "/images/animals/scooby.jpg",
-    "description": {
-      "en": "Scooby-Doo detective, ghostbuster, always hungy and scared companion of his friend Shaggy.",
-      "cz": "Scooby-Doo detektiv, lovec duchů, vždy hladový a bojácny společník jeho přítele Shaggyho."
-    },
-    "images": [],
-    "stories": {
-      "kids": {
-        "en": "story about animal for kids",
-        "cz": "pribeh o zvieratku pre deti"
-      },
-      "adults": {
-        "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mattis enim quis sem mattis sodales. Sed non nulla efficitur, faucibus sem eu, imperdiet ex. ",
-        "cz": "pribeh pre dospelych"
-      }
-    },
-    "sounds": [
-      "urls"
     ]
   },
 
   {
     "id": "4",
     "species": {
-      "en": "Winnie the pooh",
-      "cz": "Medvídek Pú",
-      "latin": "Apis mellifera"
+      "en": "Madagascar",
+      "cz": "Madagaskar",
+      "latin": "..."
     },
-    "names": ["Winnie", "Pú"],
-    "location_data": "BLOB",
-    "title_image": "/images/animals/winnie.jpg",
+    "title_image": "/images/animals/madagascar.jpg",
     "description": {
-      "en": "Winnie the pooh may be the only creature to love honey more than bees.",
-      "cz": "Medvídek Pú je snad jediný tvor milující med víc než včely."
+      "en": "Madagascar is a 2005 American computer-animated comedy film produced by DreamWorks Animation, and released in theaters on May 27, 2005. The film tells the story of four Central Park Zoo animals who have spent their lives in blissful captivity and are unexpectedly shipped back to Africa, getting shipwrecked on the island of Madagascar. The voices of Ben Stiller, Jada Pinkett Smith, Chris Rock, and David Schwimmer are featured. Other voices include Sacha Baron Cohen, Cedric the Entertainer, and Andy Richter.",
+      "cz": "Madagaskar (v anglickém originále Madagascar) je počítačem animovaný film z roku 2005. Filmu se režisérsky ujal Eric Darnell a Tom McGrath a producentem byla Mireille Soria. Film byl vytvořen ve studiu DreamWorks."
     },
-    "images": [],
-    "stories": {
-      "kids": {
-        "en": "story about animal for kids",
-        "cz": "pribeh o zvieratku pre deti"
+    "location_data": "BLOB",
+    "individuals": [
+      {
+        "id": "5",
+        "name": "Alex",
+        "born": 499782600000,
+        "gender": "Male",
+        "image": "/images/animals/alex.jpg"
       },
-      "adults": {
-        "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mattis enim quis sem mattis sodales. Sed non nulla efficitur, faucibus sem eu, imperdiet ex. ",
-        "cz": "pribeh pre dospelych"
+      {
+        "id": "6",
+        "name": "Marty",
+        "born": 484662600000,
+        "gender": "Male",
+        "image": "/images/animals/marty.jpg"
+      },
+      {
+        "id": "7",
+        "name": "Gloria",
+        "born": 575728200000,
+        "gender": "Female",
+        "image": "/images/animals/gloria.jpg"
+      },
+      {
+        "id": "8",
+        "name": "Melman",
+        "born": 431613000000,
+        "gender": "Male",
+        "image": "/images/animals/melman.jpg"
       }
+    ]
+  },
+
+  {
+    "id": "9",
+    "species": {
+      "en": "Disney",
+      "cz": "Disney",
+      "latin": "..."
     },
-    "sounds": [
-      "urls"
+    "title_image": "/images/animals/disney.png",
+    "description": {
+      "en": "Disney was founded on October 16, 1923, by Walt Disney and Roy O. Disney as the Disney Brothers Cartoon Studio, and established itself as a leader in the American animation industry before diversifying into live-action film production, television, and theme parks. The company has operated under the names The Walt Disney Studio and Walt Disney Productions. Taking on its current name in 1986, Disney expanded its existing operations and started divisions focused upon theater, radio, music, publishing, and online media.",
+      "cz": "The Walt Disney Company (česky Společnost Walta Disneyho a zjednodušeně Disney, NYSE: DIS) je jedna z největších mediálních a zábavních společností na světě. Založili ji bratři Walt a Roy Disneyovi 16. října 1923 jako původně animované studio Disney Brothers Studio, později Walt Disney Productions. Brzy se The Walt Disney Company stala jedním z největších hollywoodských studií (Walt Disney Pictures, Pixar, Marvel a Lucasfilm) a vlastníkem několika televizních stanic včetně ABC a ESPN. První a nejznámější animovaná postavička studia Disney, Mickey Mouse, je oficiální maskot The Walt Disney Company."
+    },
+    "location_data": "BLOB",
+    "individuals": [
+      {
+        "id": "10",
+        "name": "Mickey",
+        "born": 679494600000,
+        "gender": "Male",
+        "image": "/images/animals/mickey.jpg"
+      },
+      {
+        "id": "11",
+        "name": "Donald",
+        "born": 650291400000,
+        "gender": "Male",
+        "image": "/images/animals/donald.jpg"
+      },
+      {
+        "id": "12",
+        "name": "Goofy",
+        "born": 715005000000,
+        "gender": "Male",
+        "image": "/images/animals/goofy.jpg"
+      }
     ]
   }
 ]
