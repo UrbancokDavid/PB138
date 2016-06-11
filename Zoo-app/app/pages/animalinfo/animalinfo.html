@@ -28,6 +28,14 @@
       {{'more_info' | translate}}
     </a>
   </ion-item>
+  <ion-item *ngIf="item.sound">
+    <button (click)="playSound(item.sound)" *ngIf="showPlay">
+      <ion-icon name="play"></ion-icon>
+    </button>
+    <button (click)="stopSound()" *ngIf="!showPlay">
+      <ion-icon name="square"></ion-icon>
+    </button>
+  </ion-item>
   <h6>{{'description' | translate}}:</h6>
   <p>{{item.long_description[translate.currentLang]}}</p>
 </ion-content>
