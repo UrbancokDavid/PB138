@@ -51,6 +51,16 @@ server.route({
 
 server.route({
   method: 'GET',
+  path: '/sounds/{file}',
+  handler: function (request, reply) {
+    reply.file(
+      './sounds/' + encodeURIComponent(request.params.file)
+    ).type('audio/mpeg');
+  }
+});
+
+server.route({
+  method: 'GET',
   path: '/news',
   handler: function (request, reply) {
     reply.file('./data/news.json').type('application/json');

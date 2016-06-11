@@ -22,7 +22,7 @@ import {GeneralProvider} from './providers/general-provider';
   { path: '/about/:id', component: About }
 ])
 /*
-Routing doesn't work in Ionic curretly:
+Routing doesn't work in Ionic currently:
  https://github.com/driftyco/ionic/issues/5479
  */
 export class MyApp {
